@@ -1,0 +1,635 @@
+/* -- inicio da pagina 1 -- */
+
+:root {
+  --preto: #111111;
+  --branco: #ffffff;
+  --dourado: #d4af37;
+  --cinza: #666666;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: white;
+}
+
+img{
+  width: 100%;
+}
+
+/* -- Cabeçalho da pagina 1 -- */
+
+.cabeçalho {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;
+    background: black;
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden; 
+}
+
+.cabeçalho_logo {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.cabeçalho_logo img {
+    height: 100%; 
+    max-height: 400px; 
+    width: auto;
+    object-fit: contain; 
+}
+
+.cabeçalho_nav {
+    display: flex;
+    gap: 30px;
+    height: 100%;
+    align-items: center;
+}
+
+.cabeçalho_link {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    position: relative;
+    padding: 25px 0; 
+    transition: color 0.3s ease;
+}
+
+.cabeçalho_link::after {
+    content: "";
+    position: absolute;
+    bottom: 20px; 
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background: var(--dourado);
+    transition: width 0.3s ease-in-out;
+}
+
+.cabeçalho_link:hover {
+    color: var(--dourado);
+}
+
+.cabeçalho_link:hover::after,
+.cabeçalho_link--active::after {
+    width: 100%;
+}
+
+@media (max-width: 850px) {
+    .cabeçalho {
+        flex-direction: column;
+        height: auto;
+        padding: 20px;
+        gap: 20px;
+    }
+    
+    .cabeçalho_logo img {
+        height: 60px; 
+    }
+    
+    .cabeçalho_link {
+        padding: 5px 0;
+    }
+    
+    .cabeçalho_link::after {
+        bottom: 0;
+    }
+}
+
+
+/* -- Corpo da pagina 1 -- */
+
+
+
+.page1_title {
+  font-family: 'Playfair Display', serif;
+  font-size: 72px;
+  font-weight: 700; 
+  margin-bottom: 15px;
+  line-height: 1.1; 
+  letter-spacing: -1px; 
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3); 
+  text-transform: capitalize;
+  color: var(--dourado);
+}
+
+.page1_subtitle {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;        
+    font-style: italic;      
+    font-weight: 400;
+    color: var(--branco);
+    letter-spacing: 2px;     
+    margin-bottom: 25px;     
+    opacity: 0.9;
+}
+
+.page1_text {
+    font-size: 14px;
+    color: var(--branco);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+.page1 {
+    position: relative;
+    height: 90vh; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background: black; 
+}
+
+.back_video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: 0;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+}
+
+.page1_overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.45); 
+    z-index: 1;
+}
+
+.page1_content {
+    position: relative;
+    z-index: 2; 
+    text-align: center;
+    max-width: 800px;
+    animation: fadeUp 1.2s ease;
+}
+
+.btn {
+  padding: 17px 27px;
+  text-decoration: none;
+  letter-spacing: 1px;
+  display: inline-block;
+  transition: background 0.3s ease, color 0.3s ease;
+  border: 1px solid var(--dourado);
+  color: #D4AF37;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.btn--primary {
+  background: var(--preto);
+  color: var(--branco);
+}
+
+.btn--primary:hover {
+  background: var(--dourado);
+  color: var(--preto);
+  box-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
+}
+
+/* --- Casas em destaque pagina1 -- */
+
+.casas {
+  padding: 80px 20px;
+  background-color: #f4f4f4;
+}
+
+.casas_title {
+  font-family: 'Playfair Display', serif;
+  font-size: 52px; 
+  margin-bottom: 60px;
+  text-align: center;
+  color: #111;
+  -webkit-text-stroke: 1px var(--dourado); 
+}
+
+.casas_grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 40px; 
+  
+  /* AQUI ESTÁ O TRUQUE DA LARGURA: */
+  max-width: 1750px; 
+  margin: 0 auto;
+}
+
+.card {
+  background-color: white;
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px; /* Cantos um pouco mais arredondados */
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 25px 50px rgba(0,0,0,0.15);
+}
+
+.card_image {
+  width: 100%;
+  
+  /* AQUI ESTÁ O TRUQUE DA ALTURA: */
+  height: 300px; /* Estava 240px. Agora a imagem é bem mais alta */
+  
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.card:hover .card_image {
+  transform: scale(1.05); /* Zoom mais suave */
+}
+
+.card_price {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  background: rgba(17,17,17,0.95);
+  color: var(--dourado);
+  padding: 10px 20px; /* Preço maior */
+  font-size: 16px;
+  border-radius: 4px;
+  z-index: 2;
+}
+
+.card_info {
+  padding: 35px; /* Mais espaço à volta do texto */
+  color: #333; 
+}
+
+.card_title {
+  font-family: 'Playfair Display', serif;
+  font-size: 26px; /* Título da casa maior */
+  margin-bottom: 15px;
+  color: #111;
+}
+
+.card_location {
+  color: #666;
+  font-size: 15px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.card_text {
+    font-size: 16px; /* Letra do texto maior */
+    color: #555;
+    line-height: 1.7;
+}
+
+/* --- RESPONSIVIDADE --- */
+@media (max-width: 1200px) {
+    .casas_grid {
+        grid-template-columns: repeat(2, 1fr); /* Passa a 2 se o ecrã for médio */
+    }
+}
+
+@media (max-width: 768px) {
+    .casas_grid {
+        grid-template-columns: 1fr; /* Passa a 1 no telemóvel */
+    }
+    .card_image {
+        height: 280px; /* No telemóvel a imagem diminui um pouco */
+    }
+}
+
+
+/* ---- Frases conceitos pagina inicial ---- */
+
+
+.banner_conceitos {
+    width: 100%;
+    overflow: hidden;
+    padding: 120px 0; 
+    border-top: 1px solid rgba(212, 175, 55, 0.3);
+    border-bottom: 1px solid rgba(212, 175, 55, 0.3);
+    margin: 40px 0;
+    
+
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                url('imagensProjeto/madeira2.jpg'); 
+    
+    background-size: cover;       
+    background-position: center;  
+    background-attachment: fixed; 
+}
+
+.slider_track {
+    display: flex;
+    width: 400%; 
+    animation: slide_conceitos 25s infinite cubic-bezier(0.4, 0, 0.2, 1);
+    background: transparent; 
+}
+
+.conceito_slide {
+    width: 100%;
+    text-align: center;
+    padding: 0 10%;
+    background: transparent; 
+}
+
+.conceito_slide h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    color: var(--dourado);
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5); /
+}
+
+.conceito_slide p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    color: var(--branco);
+    opacity: 0.9; 
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+
+/*----- Parte do contacto Pagina 1 -----*/
+
+.contact {
+  padding: 100px 20px;
+  text-align: center;
+  background-color: #ffffff; 
+}
+
+.contact_title {
+  font-family: 'Playfair Display', serif;
+  font-size: 40px;
+  margin-bottom: 40px;
+  color: #111111; 
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  -webkit-text-stroke: 1px var(--dourado); 
+}
+
+.contact_form {
+  max-width: 550px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 40px;
+  background: #ffffff;
+  /* Sombra suave para dar profundidade sobre o branco */
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
+  border-radius: 8px;
+  border: 1px solid #f0f0f0;
+}
+
+.contact_form input,
+.contact_form textarea {
+  padding: 15px;
+  background: #fafafa; 
+  border: 1px solid #e0e0e0;
+  font-size: 16px;
+  border-radius: 4px;
+  width: 100%;
+  color: #333;
+  font-family: 'Poppins', sans-serif;
+  transition: all 0.3s ease;
+}
+
+/* Efeito ao clicar: a borda fica dourada */
+
+.contact_form input:focus,
+.contact_form textarea:focus {
+  outline: none;
+  border-color: var(--dourado);
+  background: #ffffff;
+  box-shadow: 0 0 8px rgba(212, 175, 55, 0.2);
+}
+
+.contact_form textarea {
+  min-height: 130px;
+}
+
+/*---- Rodape pagina 1 -------*/
+
+
+.footer {
+  background: var(--preto);
+  color: var(--branco);
+  text-align: center;
+  padding: 30px;
+}
+
+.footer1 {
+   background: var(--preto);
+   color: var(--dourado);
+   text-align: center;
+}
+
+
+/*----- Otimizacoes TELEMOVEL PAGE1 ----------*/
+
+
+
+@keyframes slide_conceitos {
+    0%, 20% { transform: translateX(0); }
+    25%, 45% { transform: translateX(-25%); }
+    50%, 70% { transform: translateX(-50%); }
+    75%, 95% { transform: translateX(-75%); }
+    100% { transform: translateX(0); }
+}
+
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+
+/* ============================================================
+   OTIMIZAÇÕES PARA DISPOSITIVOS MÓVEIS (MOBILE)
+   ============================================================ */
+@media (max-width: 850px) {
+    
+    /* 1. VÍDEO E HERO MAIS PEQUENO (SEM CORTAR) */
+    .page1 {
+        height: 60vh; /* Altura reduzida para veres logo o que vem abaixo */
+    }
+
+    .back_video {
+        height: 100%;
+        width: 100%;
+        object-fit: cover; /* Garante que o vídeo preenche o espaço sem deformar */
+    }
+
+    .page1_title {
+        font-size: 32px !important;
+    }
+
+    .contact_title{
+      font-size: 25px;
+    }
+
+    /* 2. CASAS MAIS PEQUENAS E A ANDAR PARA O LADO (SCROLL HORIZONTAL) */
+    .casas {
+        padding: 40px 40px; /* Remove padding lateral para o scroll ir até à borda */
+    }
+
+    .casas_title{
+      font-size: 25px;
+    }
+
+    .casas_grid {
+        display: flex; /* Muda de Grid para Flex para alinhar lado a lado */
+        overflow-x: auto; /* Ativa o scroll horizontal */
+        scroll-snap-type: x mandatory; /* Faz as casas "encaixarem" ao deslizar */
+        gap: 20px;
+        padding: 0 20px 20px 20px; /* Padding interno para não colarem nas bordas */
+        -webkit-overflow-scrolling: touch; /* Scroll suave no iPhone */
+    }
+
+    .card {
+        min-width: 280px; /* Define o tamanho pequeno de cada casa */
+        max-width: 280px;
+        scroll-snap-align: center; /* Centra a casa ao parar o dedo */
+    }
+
+    .card_image {
+        height: 180px; /* Imagem mais pequena e responsiva */
+    }
+
+    .casas_grid::-webkit-scrollbar {
+        height: 4px; /* Barra de scroll fininha e discreta */
+    }
+
+    .casas_grid::-webkit-scrollbar-thumb {
+        background: var(--dourado);
+        border-radius: 10px;
+    }
+
+    /* 3. CONCEITOS (CENTRADOS E RESPONSIVOS) */
+    .banner_conceitos {
+        padding: 150px 0;
+    }
+
+    .slider_track {
+        display: flex;
+        width: 400%; /* Mantém a animação */
+    }
+
+    .conceito_slide {
+        width: 25%; 
+        padding: 0 30px;
+    }
+
+    .conceito_slide h2 {
+        font-size: 20px !important;
+    }
+
+    .conceito_slide p {
+        font-size: 13px !important;
+        max-width: 100%;
+    }
+
+    /* 4. LOGO (RESPONSIVO E CORTADO) */
+.cabeçalho {
+        height: 60px; /* Mais fino para não roubar espaço */
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 10px;
+        overflow: hidden;
+    }
+
+   .cabeçalho_logo {
+        height: auto; /* Mantém a altura para o corte superior/inferior */
+        width: 130px;
+          /* Deixa a largura expandir para não cortar a lateral */
+        
+        overflow: hidden; 
+        display: flex;
+        align-items: center;
+        flex-shrink: 0; /* Impede que o menu esmague o logo */
+        justify-content: flex-start;
+    }
+
+    .cabeçalho_logo img {
+        height: 150px !important; /* Grande para cortar, mas contido na div de 80px */
+        width: auto !important;
+        position: static;
+        max-height: none !important;
+        transform: translateY(0);
+        object-fit: contain;
+    }
+
+    .cabeçalho_nav {
+        display: flex;
+        gap: 8px; /* Links bem juntos */
+        justify-content: flex-end;
+        flex-grow: 1;
+    }
+
+    .cabeçalho_link {
+        font-size: 9px; /* Letra pequena para caber tudo */
+        letter-spacing: 0.5px; /* Reduz o espaço entre letras */
+        padding: 0;
+        white-space: nowrap;
+    }
+
+    .footer {
+        padding: 10px;
+    }
+
+    .footer p {
+        font-size: 12px !important;
+        line-height: 1.2;
+        margin: 6px;
+    }
+
+    .footer1 {
+        font-size: 11px !important;
+        margin-top: 6px;
+    }
+}
+/* ============================================================
+   ANIMAÇÕES E CLASSES AUXILIARES
+   ============================================================ */
+
+/* Classe para o erro do JavaScript que pediste */
+.input-erro {
+    border: 2px solid #ff4444 !important;
+    background-color: #fff9f9 !important;
+    animation: shake 0.4s ease-in-out; /* Efeito de abanar no erro */
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    75% { transform: translateX(5px); }
+}
+
+@keyframes mobileFadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+

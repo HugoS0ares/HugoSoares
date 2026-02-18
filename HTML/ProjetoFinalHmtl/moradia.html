@@ -1,0 +1,102 @@
+    <!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Domus Premium | Hugo Soares</title>
+    <link rel="stylesheet" href="moradia.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="cabeçalho">
+        <div class="cabeçalho_logo">
+              <a href="SobreNos.html">
+              <img src="imagensProjeto/logopreto.png" alt="DomusPremium">
+              </a>
+        </div>
+
+        <nav class="cabeçalho_nav">
+            <a class="cabeçalho_link" href="DomusPremium.html">Início</a>
+            <a class="cabeçalho_link cabeçalho_link--active" href="Imoveis.html">Imóveis</a>
+            <a class="cabeçalho_link" href="SobreNos.html">Sobre Nós</a>
+            <a class="cabeçalho_link" href="Contacto.html">Contacto</a>
+        </nav>
+    </header>
+
+   <header class="hero">
+        <div class="hero-overlay">
+            <h1>Moradia Exclusiva</h1>
+            <p class="location">Milherós de Poiares, Santa Maria da Feira</p>
+            <div class="divider"></div>
+            <p class="tagline">Um refúgio sustentável onde o design moderno encontra a serenidade absoluta da floresta.</p>
+        </div>
+    </header>
+
+    <main class="container">
+        
+        <section class="slider-section">
+            <div class="slider-container">
+                <div class="slider">
+                    <div class="slide active"><img src="imagensProjeto/casa4.jpeg" alt="Vista Exterior"></div>
+                    <div class="slide"><img src="imagensProjeto/banhoMoradia.jpg" alt="vista Luxo"></div>
+                    <div class="slide"><img src="imagensProjeto/quartoMoradia.jpg" alt="Cozinha Luxo"></div>
+                    <div class="slide"><img src="imagensProjeto/cozinhaMoradia.jpg" alt="Suíte Master"></div>
+                    <div class="slide"><img src="imagensProjeto/piscinaMoradia.jpg" alt="Casa de banho"></div>
+                </div>
+                <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+                <button class="next" onclick="changeSlide(1)">&#10095;</button>
+                
+                <div class="dots">
+                    <span class="dot active" onclick="currentSlide(0)"></span>
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                    <span class="dot" onclick="currentSlide(4)"></span>
+                    <span class="dot" onclick="currentSlide(5)"></span>
+                </div>
+            </div>
+        </section>
+
+     <section class="details-grid">
+    <div class="description">
+        <h2>O Conceito</h2>
+        <p>A Moradia Exclusiva é um refúgio de vanguarda onde a arquitetura contemporânea se funde com a serenidade da floresta. Projetada sob uma filosofia de sustentabilidade e luxo orgânico, esta propriedade utiliza materiais nobres e linhas horizontais para criar uma harmonia perfeita com o ecossistema envolvente de Santa Maria da Feira.</p>
+        
+        <h3>Destaques Exclusivos</h3>
+        <br>
+
+        <ul class="luxury-list">
+            <li><strong>Design Biofílico:</strong> Integração total com a natureza através de jardins interiores e vãos envidraçados.</li>
+            <li><strong>Oásis Privado:</strong> Piscina de transbordo rodeada por um deck em madeira exótica e zona de lounge.</li>
+            <li><strong>Eco-Efficiency:</strong> Autossuficiência energética com painéis solares de última geração e isolamento térmico premium.</li>
+            <li><strong>Master Suite Forest View:</strong> Quarto principal com vista panorâmica para a copa das árvores e closet de alta gama.</li>
+        </ul>
+    </div>
+
+    <aside class="info-card">
+        <div class="price-box">
+            <span>1.980.999€</span>
+        </div>
+        <div class="specs">
+            <div class="spec-item"><span>Área:</span> <strong>480 m²</strong></div>
+            <div class="spec-item"><span>Lote:</span> <strong>2.150 m²</strong></div>
+            <div class="spec-item"><span>Suítes:</span> <strong>4</strong></div>
+        </div>
+        <button class="btn-main">AGENDAR VISITA PRIVADA</button>
+    </aside>
+</section>
+
+    </main>
+
+          <script src="moradia.js"></script>
+
+    <footer class="footer">
+        <p>© 2018 DomusPremium. Todos os direitos reservados.
+            Se tiver alguma dúvida, não hesite em entrar em Contacto.
+        </p>
+        <p class="footer1">Design by Hugo Soares</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Domus Premium | Hugo Soares</title>
+    <link rel="stylesheet" href="Imoveis.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="cabeçalho">
+        <div class="cabeçalho_logo">
+              <a href="SobreNos.html">
+              <img src="imagensProjeto/logopreto.png" alt="DomusPremium">
+              </a>
+        </div>
+        <nav class="cabeçalho_nav">
+            <a class="cabeçalho_link" href="DomusPremium.html">Início</a>
+            <a class="cabeçalho_link cabeçalho_link--active" href="Imoveis.html">Imóveis</a>
+            <a class="cabeçalho_link" href="SobreNos.html">Sobre Nós</a>
+            <a class="cabeçalho_link" href="Contacto.html">Contacto</a>
+        </nav>
+    </header>
+
+    <section class="casas">
+        <h2 class="casas_title">Imóveis</h2>
+        
+        <div class="slider-wrapper-main">
+            <button class="test-prev" onclick="moveImoveis(-1)">&#10094;</button>
+
+            <div class="imoveis-overflow">
+                <div class="imoveis-slider" id="imoveisSlider">
+                    
+                    <div class="imoveis-page">
+                        <div class="card">
+                            <img class="card_image" src="imagensProjeto/casa1.jpeg">
+                            <span class="card_price">1.200.999€</span>
+                            <div class="card_info">
+                                <h3 class="card_title">Penthouse Avenida da Liberdade</h3>
+                                <p class="card_location">Lisboa</p>
+                                <p class="card_text">Vistas Exclusivas de 360º sobre Lisboa e o Rio Tejo. Luxo e sofisticação no coração da capital.</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img class="card_image" src="imagensProjeto/casa2.jpeg">
+                            <span class="card_price">980.599€</span>
+                            <div class="card_info">
+                                <h3 class="card_title">Moradia de Luxo no Gerês</h3>
+                                <p class="card_location">Caniçada</p>
+                                <p class="card_text">Casa de montanha moderna com ancoradouro privado na albufeira, oferecendo total privacidade.</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img class="card_image" src="imagensProjeto/casa3.jpeg">
+                            <span class="card_price">2.200.000€</span>
+                            <div class="card_info">
+                                <h3 class="card_title">Refúgio de Penhasco</h3>
+                                <p class="card_location">Lagos</p>
+                                <p class="card_text">Mansão isolada com acesso privado a pequenas enseadas e arquitetura natural.</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img class="card_image" src="imagensProjeto/casa8.jpg">
+                            <span class="card_price">22.200.000€</span>
+                            <div class="card_info">
+                                <h3 class="card_title">Vila de Luxo em Vilamoura</h3>
+                                <p class="card_location">Marina</p>
+                                <p class="card_text">Inserida num condomínio fechado de alta segurança, focada num estilo de vida ativo.</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img class="card_image" src="imagensProjeto/casainicial.jpg">
+                            <span class="card_price">3.499.000€</span>
+                            <div class="card_info">
+                                <h3 class="card_title">Residência Eco-Luxury</h3>
+                                <p class="card_location">Melides</p>
+                                <p class="card_text">Focada na sustentabilidade, esta casa utiliza materiais locais e energia renovável.</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img class="card_image" src="imagensProjeto/casa10.jpg">
+                            <span class="card_price">3.197.500€</span>
+                            <div class="card_info">
+                                <h3 class="card_title">Villa Panorâmica no Funchal</h3>
+                                <p class="card_location">Madeira</p>
+                                <p class="card_text">Empoleirada nas colinas da Madeira, com vistas incríveis sobre a baía do Funchal.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="imoveis-page">
+                        <div class="card">
+                            <img class="card_image" src="imagensProjeto/casa9.jpg">
+                            <span class="card_price">17.420.970€</span>
+                            <div class="card_info">
+                                <h3 class="card_title">Quinta Vinícola no Douro</h3>
+                                <p class="card_location">Pinhão</p>
+                                <p class="card_text">Mansão histórica inserida numa propriedade de produção de vinho do Porto.</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img class="card_image" src="imagensProjeto/casa11.jpg">
+                            <span class="card_price">11.900.000€</span>
+                            <div class="card_info">
+                                <h3 class="card_title">Moradia na Foz do Douro</h3>
+                                <p class="card_location">Porto</p>
+                                <p class="card_text">Localização privilegiada onde o rio encontra o mar. Elegância e exclusividade.</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img class="card_image" src="imagensProjeto/casa12.jpg">
+                            <span class="card_price">5.200.000€</span>
+                            <div class="card_info">
+                                <h3 class="card_title">Retiro nos Açores</h3>
+                                <p class="card_location">São Miguel</p>
+                                <p class="card_text">Arquitetura contemporânea minimalista integrada em pastagens verdes.</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img class="card_image" src="imagensProjeto/casa13.jpg">
+                            <span class="card_price">7.200.000€</span>
+                            <div class="card_info">
+                                <h3 class="card_title">Villa de Areia na Comporta</h3>
+                                <p class="card_location">Comporta</p>
+                                <p class="card_text">Estilo "barefoot luxury" rodeada por pinhais e praias selvagens.</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img class="card_image" src="imagensProjeto/casa14.jpg">
+                            <span class="card_price">13.230.000€</span>
+                            <div class="card_info">
+                                <h3 class="card_title">Vale do Lobo Design</h3>
+                                <p class="card_location">Algarve</p>
+                                <p class="card_text">Casa vanguardista situada sobre as falésias avermelhadas.</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img class="card_image" src="imagensProjeto/casa15.jpg">
+                            <span class="card_price">15.111.000€</span>
+                            <div class="card_info">
+                                <h3 class="card_title">Sky Loft Avenidas Novas</h3>
+                                <p class="card_location">Lisboa</p>
+                                <p class="card_text">Penthouse com terraços suspensos e piscina privativa no centro.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="imoveis-page">
+                        <div class="card">
+                            <img class="card_image" src="imagensProjeto/casa16.jpg">
+                            <span class="card_price">9.900.000€</span>
+                            <div class="card_info">
+                                <h3 class="card_title">Sunset Villa</h3>
+                                <p class="card_location">Ribeira Brava</p>
+                                <p class="card_text">Casa contemporânea projetada para captar a luz do pôr do sol.</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img class="card_image" src="imagensProjeto/casa17.jpg">
+                            <span class="card_price">7.236.139€</span>
+                            <div class="card_info">
+                                <h3 class="card_title">Serralves Garden</h3>
+                                <p class="card_location">Porto</p>
+                                <p class="card_text">Condomínio de luxo com jardins interiores e arquitetura integrada.</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img class="card_image" src="imagensProjeto/casa18.jpg">
+                            <span class="card_price">5.299.99€</span>
+                            <div class="card_info">
+                                <h3 class="card_title">Karl Lagerfeld Residence</h3>
+                                <p class="card_location">Lisboa</p>
+                                <p class="card_text">Design exclusivo da marca Karl Lagerfeld no coração de Lisboa.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <button class="test-next" onclick="moveImoveis(1)">&#10095;</button>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>© 2018 DomusPremium. Todos os direitos reservados. Se tiver alguma dúvida, não hesite em entrar em Contacto.</p>
+        <p class="footer1">Design by Hugo Soares</p>
+    </footer>
+
+    <script src="Imoveis.js"></script>
+
+</body>
+</html>

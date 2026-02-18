@@ -1,0 +1,60 @@
+<html lang="pt">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>DOM: Selecionar Elementos</title>
+  <style>
+    body {
+      font-family: system-ui, sans-serif;
+      max-width: 700px;
+      margin: 40px auto;
+      padding: 20px;
+    }
+    h1 { color: #10b981; }
+    .caixa {
+      background: #f1f5f9;
+      padding: 20px;
+      margin: 10px 0;
+      border-radius: 8px;
+    }
+    #especial {
+      background: #dbeafe;
+      border: 2px solid #3b82f6;
+    }
+    .destaque {
+      color: #dc2626;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Lição 10.1: Selecionar Elementos</h1>
+
+  <p>Abre a <strong>Consola (F12)</strong> para ver os resultados.</p>
+
+  <!-- Elementos para praticar -->
+  <div class="caixa">
+    <h2>Caixa 1</h2>
+    <p>Primeiro parágrafo.</p>
+  </div>
+
+  <div class="caixa" id="especial">
+    <h2>Caixa Especial</h2>
+    <p class="destaque">Este tem ID e classe especial.</p>
+  </div>
+
+  <div class="caixa">
+    <h2>Caixa 3</h2>
+    <p>Terceiro parágrafo.</p>
+  </div>
+
+  <ul id="lista">
+    <li>Item 1</li>
+    <li>Item 2</li>
+    <li>Item 3</li>
+  </ul>
+
+  <script src="Aula2.js"></script>
+</body>
+</html>

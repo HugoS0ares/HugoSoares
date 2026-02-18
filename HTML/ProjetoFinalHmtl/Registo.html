@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criar Conta | Domus Premium</title>
+    <link rel="stylesheet" href="Inicio.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body class="auth-body">
+
+    <div class="auth-container">
+        <h2 class="auth-title">Privilégio Domus</h2>
+        <p class="auth-subtitle">Registe-se para aceder a propriedades exclusivas e ofertas personalizadas.</p>
+        
+        <form class="auth-form" action="DomusPremium.html">
+            <div class="auth-group">
+                <label>Nome Completo</label>
+                <input type="text" class="auth-input" placeholder="Ex: Hugo Soares" required>
+            </div>
+
+            <div class="auth-group">
+                <label>E-mail Pessoal</label>
+                <input type="email" class="auth-input" placeholder="email@exemplo.com" required>
+            </div>
+
+            <div class="auth-group">
+                <label>Contacto Telefónico</label>
+                <input type="tel" class="auth-input" placeholder="+351 912 345 678">
+            </div>
+
+            <div class="auth-group">
+                <label>Palavra-passe</label>
+                <input type="password" class="auth-input" placeholder="••••••••" required>
+            </div>
+
+            <div class="auth-group" style="display: flex; align-items: center; gap: 10px;">
+                <input type="checkbox" id="termos" required style="width: auto; cursor: pointer;">
+                <label for="termos" style="margin-bottom: 0; text-transform: none; font-size: 11px; opacity: 0.8;">
+                    Aceito os termos de privacidade e exclusividade.
+                </label>
+            </div>
+
+            <button type="submit" class="btn btn--primary btn-full" style="margin-top: 20px;">
+                Criar Perfil Premium
+            </button>
+        </form>
+
+        <div class="auth-footer">
+            Já possui uma conta ativa? <a href="login.html">Faça Login aqui</a><br><br>
+            <a href="Entrada.html" style="opacity: 0.5; font-weight: normal;">← Voltar ao início</a>
+        </div>
+    </div>
+    <script src="Inicio.js"></script>
+</body>
+</html>

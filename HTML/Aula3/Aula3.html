@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AULA 3 Maças e outras coisas</title>
+</head>
+
+<link rel="stylesheet" href="Aula3.css">
+
+<body>
+    <h1><strong>BOM DIA</strong></h1>
+    <h2>VOTEM NESTE MENINO</h2>
+   <a href="VOTANELE.PT">
+    <hr>
+     Isto é um Homem com objetivos
+     <hr>
+     <img src="transferir.jpg" alt="" width="350" height="250">
+
+</a>
+    <br>
+    <hr>
+   
+    <h1>Um pouco sobre maças</h1>
+
+   <a href="maça.pt">
+    <img src="Maçabonita.jpg" alt="Isto é uma imagem de maça" width="150" height="100">
+    </a>
+
+    <figure>
+        <img src="maça.jpg" alt="Outra Maça" width="150" height="100">
+        <figcaption><strong>Figura 1:</strong> Isto é uma maça muito bonita</figcaption>
+    </figure>
+    <br>
+    <br>
+    <hr>
+
+    <h1><strong>Sobre outras coisas</strong></h1>
+
+    <div class="Tabela">
+        <h2>Tabela de alunos</h2>
+
+        <table>
+            <tr>
+                <th>Nome</th>
+                <th>Idade</th>
+                <th>Cidade</th>
+            </tr>
+            <tr>
+                <td>Hugo Soares</td>
+                <td>23</td>
+                <td>Milheiros de Poiares</td>
+            </tr>
+            <tr>
+                <td>Maria Silva</td>
+                <td>22</td>
+                <td>Lisboa</td>
+            </tr>
+            <tr>
+                <td>João Pereira</td>
+                <td>24</td>
+                <td>Porto</td>
+            </tr>
+        </table>
+     
+    </div>
+
+     <table>
+        <thead~>
+            <tr>
+                <th>Produto</th>
+                <th>Quantidade</th>
+                <th>Preço</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Laptop</td>
+                <td>2</td>
+                <td>899,00€</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="3">Total Geral</td>
+            </tr>
+            <tr>
+                <td colspan="3">2000 €</td>
+            </tr>
+        </tfoot>
+    </table> 
+    <br>
+    <br>
+    <hr>
+
+    
+
+
+
+    <!-- ISTO É UM FORMULÁRIO-->
+
+    <h1>Formário Básicos</h1>
+    <div>
+        <h2>Formulário de contacto</h2>
+    <form action="">
+        <label for="Nome">Nome Completo</label>
+        <input type="text" id="Nome" name="Nome" placeholder="Digita aqui o teu nome" required minlength="5" maxlength="50">
+
+        <label for="Email">Email</label>
+        <input type="Email" id="Email" name="Email" placeholder="Digite aqui o seu email" required>
+
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" placeholder="Coloque a sua password" required minlength="8">
+
+        <label for="Idade">Idade</label>
+        <input type="number" id="Idade" name="Idade" placeholder="Introduza a sua idade:+18" required minlength="18" maxlength="100" step="1">
+ 
+        <label for="data_Nascimento">Data de Nascimento</label>
+        <input type="date" id="Nascimento" name="Nascimento" required>
+   
+        <label for="País">País</label>
+            <select id="País" name="país" required>
+                <option value="">Selecione um país></option>
+                <option value="Portugal">Portugal</option>~
+                <option value="Brazil">Brazil</option>
+                <option value="Espanha">Espanha</option>
+        </select>
+    <br>
+        <label for="Sexo">Sexo</label>
+
+        <input type="radio" id="Masculino" name="Sexo" value="Masculino">
+        <label for="Masculino">Masculino</label>
+        <input type="radio" id="Femenino" name="Sexo" value="Femenino">
+        <label for="Femenino">Femenino</label>
+   <br>
+        <label for="">Interesses (selecione todos os que se aplicam)</label>
+
+        <input type="checkbox" id="musica" name="Interesses" value="musica">
+        <label for="musica">Música</label>
+        <input type="checkbox" id="Leitura" name="Interesses" value="Leitura">
+        <label for="Leitura">Leitura</label>
+        <input type="checkbox" id="Desporto" name="Interesses" value="Desporto">
+        <label for="Desporto">Desporto</label>
+    <br>
+        <label for="experiência">Anos de experiência</label>
+        <input type="range" id="experiência" name="experiência" min="0" max="20" value="0">
+    <br>
+    <br>
+        <button type="submit">Enviar Formulário</button>
+        <button type="reset">Apagar os Dados</button>
+    </form>
+    </div>
+<br>
+<br>
+
+<br>
+
+
+<hr>
+
+
+
+</body>
+</html>

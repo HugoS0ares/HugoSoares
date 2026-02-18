@@ -1,0 +1,398 @@
+:root {
+  --preto: #111111;
+  --branco: #ffffff;
+  --dourado: #d4af37;
+  --cinza: #666666;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: white;
+  background-color: var(--branco);
+}
+
+img {
+  width: 100%;
+}
+
+/* -- Cabeçalho -- */
+
+.cabeçalho {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;
+    background: black;
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden; 
+}
+
+.cabeçalho_logo {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.cabeçalho_logo img {
+    height: 100%; 
+    max-height: 400px; 
+    width: auto;
+    object-fit: contain; 
+}
+
+.cabeçalho_nav {
+    display: flex;
+    gap: 30px;
+    height: 100%;
+    align-items: center;
+}
+
+.cabeçalho_link {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    position: relative;
+    padding: 25px 0; 
+    transition: color 0.3s ease;
+}
+
+.cabeçalho_link::after {
+    content: "";
+    position: absolute;
+    bottom: 20px; 
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background: var(--dourado);
+    transition: width 0.3s ease-in-out;
+}
+
+.cabeçalho_link:hover {
+    color: var(--dourado);
+}
+
+.cabeçalho_link:hover::after,
+.cabeçalho_link--active::after {
+    width: 100%;
+}
+
+/* -- Página Sobre Nós -- */
+
+.container1 {
+    max-width: 1100px;
+    margin: 80px auto;
+    padding: 0 40px;
+}
+
+.sobre_nos h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 52px;
+    color: var(--preto);
+    text-align: center;
+    margin-bottom: 60px;
+    -webkit-text-stroke: 1px var(--dourado); 
+}
+
+.sobre_nos h2, .conteudo_extra h2, .conteudo_extra1 h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    color: var(--dourado);
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.container1 p {
+    font-size: 17px;
+    line-height: 1.8;
+    color: var(--cinza);
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+.conteudo_extra1 {
+    background: #fdfaf3; 
+    padding: 40px;
+    border-left: 5px solid var(--dourado);
+    margin: 60px 0;
+}
+
+/* -- Secção Testemunhos (Corrigida) -- */
+
+.testimonials-section {
+    padding: 100px 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), 
+                url('imagensProjeto/madeira2.jpg') no-repeat center center/cover;
+    background-attachment: fixed;
+    text-align: center;
+    width: 100%;
+}
+
+.section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.5rem !important;
+    color: var(--branco) !important;
+    text-align: center !important;
+    margin-bottom: 60px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    display: block;
+}
+
+.testimonials-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.testimonials-wrapper {
+    overflow: hidden;
+    width: 100%;
+    margin: 0 20px;
+}
+
+.testimonials-slider {
+    display: flex;
+    transition: transform 0.7s cubic-bezier(0.45, 0, 0.55, 1);
+    gap: 30px;
+}
+
+.testimonial-card {
+    min-width: calc(33.333% - 20px);
+    background: rgba(255, 255, 255, 0.05) !important;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(197, 164, 126, 0.3);
+    padding: 50px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 0;
+    box-shadow: none;
+    transition: all 0.4s ease;
+}
+
+.testimonial-card:hover {
+    background: rgba(255, 255, 255, 0.1) !important;
+    border-color: var(--dourado);
+    transform: translateY(-5px);
+}
+
+.stars {
+    color: var(--dourado) !important;
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    display: block;
+}
+
+.testimonial-text {
+    color: #e0e0e0 !important;
+    font-style: italic;
+    font-size: 1.05rem;
+    line-height: 1.7;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.client-info strong {
+    color: var(--branco) !important;
+    display: block;
+    font-size: 1.2rem;
+    border: none;
+    margin-bottom: 5px;
+}
+
+.client-info span {
+    color: var(--dourado) !important;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.test-prev, .test-next {
+    background: none;
+    border: none;
+    color: var(--dourado);
+    font-size: 45px;
+    cursor: pointer;
+    padding: 0 15px;
+    transition: 0.3s;
+}
+
+.test-prev:hover, .test-next:hover {
+    color: var(--branco);
+}
+
+/* -- Rodapé -- */
+
+.footer {
+  background: var(--preto);
+  color: var(--branco);
+  text-align: center;
+  padding: 30px;
+}
+
+.footer1 {
+   background: var(--preto);
+   color: var(--dourado);
+   text-align: center;
+}
+
+/* ============================================================
+   OTIMIZAÇÕES PARA DISPOSITIVOS MÓVEIS (MOBILE)
+   ============================================================ */
+@media (max-width: 850px) {
+
+    /* 1. CONFIGURAÇÃO DE PÁGINA (FUNDO BRANCO) */
+    html, body {
+        background-color: white !important;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+        height: auto;
+    }
+
+    /* 2. O TEU CABEÇALHO (INTACTO CONFORME OTIMIZADO) */
+    .cabeçalho {
+        height: 60px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 10px;
+        overflow: hidden;
+        background: black;
+    }
+
+    .cabeçalho_logo {
+        height: auto;
+        width: 130px;
+        overflow: hidden; 
+        display: flex;
+        align-items: center;
+        flex-shrink: 0;
+        justify-content: flex-start;
+    }
+
+    .cabeçalho_logo img {
+        height: 150px !important;
+        width: auto !important;
+        position: static;
+        max-height: none !important;
+        transform: translateY(0);
+        object-fit: contain;
+    }
+
+    .cabeçalho_nav {
+        display: flex;
+        gap: 8px;
+        justify-content: flex-end;
+        flex-grow: 1;
+    }
+
+    .cabeçalho_link {
+        font-size: 9px;
+        letter-spacing: 0.5px;
+        padding: 0;
+        white-space: nowrap;
+        color: white;
+    }
+
+    /* 3. CONTEÚDO SOBRE NÓS */
+    .container1 {
+        margin: 30px auto;
+        padding: 0 20px;
+    }
+
+    .sobre_nos h1 {
+        font-size: 32px !important;
+        margin-bottom: 30px;
+    }
+
+    .sobre_nos h2, .conteudo_extra h2, .conteudo_extra1 h2 {
+        font-size: 24px !important;
+        margin-top: 30px;
+    }
+
+    .container1 p {
+        font-size: 14px !important;
+        line-height: 1.6;
+        text-align: left; /* Melhor leitura no mobile que o justify */
+        margin-bottom: 15px;
+    }
+
+    .conteudo_extra1 {
+        padding: 20px;
+        margin: 40px 0;
+        border-left: 3px solid var(--dourado);
+    }
+
+    /* 4. TESTEMUNHOS (SCROLL HORIZONTAL) */
+    .testimonials-section {
+        padding: 60px 0;
+        background-attachment: scroll; /* Melhora performance no mobile */
+    }
+
+    .section-title {
+        font-size: 24px !important;
+        letter-spacing: 2px;
+        margin-bottom: 40px;
+    }
+
+    .testimonials-wrapper {
+        overflow-x: auto;
+        padding: 0 15px 30px 15px;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .testimonials-slider {
+        display: flex !important;
+        gap: 15px;
+        width: max-content;
+        transition: none; /* Desativa a transição do JS para o scroll ser manual */
+    }
+
+    .testimonial-card {
+        min-width: 280px; /* Largura fixa para deslizar */
+        max-width: 280px;
+        padding: 30px 20px;
+        background: rgba(255, 255, 255, 0.1) !important;
+    }
+
+    .testimonial-text {
+        font-size: 13px !important;
+    }
+
+    .test-prev, .test-next {
+        display: none; /* Esconde as setas no mobile */
+    }
+
+    /* 5. O TEU RODAPÉ (INTACTO CONFORME OTIMIZADO) */
+    .footer {
+        padding: 15px;
+        background: var(--preto);
+        width: 100%;
+    }
+
+    .footer p {
+        font-size: 12px !important;
+        line-height: 1.2;
+        margin: 6px;
+    }
+
+    .footer1 {
+        font-size: 11px !important;
+        margin-top: 6px;
+    }
+}

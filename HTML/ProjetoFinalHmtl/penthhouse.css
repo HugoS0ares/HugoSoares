@@ -1,0 +1,445 @@
+
+
+/* -- Cabeçalho da pagina  -- */
+
+.cabeçalho {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;
+    background: black;
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden; 
+}
+
+.cabeçalho_logo {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.cabeçalho_logo img {
+    height: 100%; 
+    max-height: 400px; 
+    width: auto;
+    object-fit: contain; 
+}
+
+.cabeçalho_nav {
+    display: flex;
+    gap: 30px;
+    height: 100%;
+    align-items: center;
+}
+
+.cabeçalho_link {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    position: relative;
+    padding: 25px 0; 
+    transition: color 0.3s ease;
+}
+
+.cabeçalho_link::after {
+    content: "";
+    position: absolute;
+    bottom: 20px; 
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background: var(--dourado);
+    transition: width 0.3s ease-in-out;
+}
+
+.cabeçalho_link:hover {
+    color: var(--dourado);
+}
+
+.cabeçalho_link:hover::after,
+.cabeçalho_link--active::after {
+    width: 100%;
+}
+
+/* Configurações Gerais */
+:root {
+  --preto: #111111;
+  --branco: #ffffff;
+  --dourado: #d4af37;
+  --gray: #f9f9f9;
+  --dark: #111111;
+  --text: #333333;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    color: var(--text);
+    background-color: #fff;
+}
+
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+    letter-spacing: 1px;
+}
+
+/* Hero Section */
+.hero {
+    height: 80vh;
+    background: url(imagensProjeto/rustic-wood-texture.jpg) no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+
+.hero-overlay {
+    background: rgba(0, 0, 0, 0.4);
+    padding: 40px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero h1 { font-size: 4rem; margin-bottom: 10px; }
+.location { font-weight: 300; letter-spacing: 4px; margin-bottom: 20px; }
+.divider { width: 60px; height: 3px; background: var(--dourado); margin-bottom: 20px; }
+.tagline { font-size: 1.2rem; max-width: 600px; font-style: italic; }
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: -100px auto 50px; 
+    background: white;
+    padding: 40px;
+    position: relative;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.1);
+}
+
+/* Slider */
+.slider-container {
+    position: relative;
+    overflow: hidden;
+    height: 600px;
+    margin-bottom: 50px;
+}
+
+.slider {
+    display: flex;
+    transition: transform 0.6s cubic-bezier(0.45, 0, 0.55, 1);
+    height: 100%;
+}
+
+.slide { min-width: 100%; height: 100%; }
+.slide img { 
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover;
+    border: 5px solid var(--dourado);
+    transition: all ease 3s;
+
+ }
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255,255,255,0.9);
+    border: none;
+    padding: 20px;
+    cursor: pointer;
+    font-size: 24px;
+    z-index: 10;
+    transition: 0.3s;
+}
+
+.prev:hover, .next:hover { background: var(--dourado); color: white; }
+.next { right: 0; }
+.prev { left: 0; }
+
+.dots {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+.dot {
+    height: 10px;
+    width: 10px;
+    background: rgba(255,255,255,0.5);
+    display: inline-block;
+    margin: 0 5px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.dot.active { background: white; width: 30px; border-radius: 5px; }
+
+/* Grid de Detalhes */
+.details-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 60px;
+    margin-top: 40px;
+}
+
+.description h2 { font-size: 2.5rem; margin-bottom: 20px; color: var(--dark); }
+.description p { font-size: 1.1rem; margin-bottom: 30px; color: #666; }
+
+.luxury-list { list-style: none; }
+.luxury-list li {
+    margin-bottom: 15px;
+    padding-left: 25px;
+    position: relative;
+}
+
+.luxury-list li::before {
+    content: "◈";
+    position: absolute;
+    left: 0;
+    color: var(--dourado);
+}
+
+.description h3 {
+    margin-top: 40px;    
+    margin-bottom: 20px; 
+    color: var(--dark);
+    font-family: 'Playfair Display', serif;
+}
+
+/* Card Lateral */
+
+.info-card {
+    background: #ffffff; 
+    padding: 40px 40px 40px 40px;
+    border: 1px solid #eee;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    height: fit-content;
+    margin-top: 60px;
+}
+
+
+.price-box {
+    background-color: var(--preto) !important; 
+    padding: 20px;
+    text-align: center;
+    border-radius: 4px; 
+    margin-bottom: 25px;
+    border: 1px solid var(--dourado); 
+    transition: all 0.3s ease; 
+    cursor: pointer;
+}
+
+
+.price-box span {
+    color: var(--branco) !important; 
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    display: block; 
+    transition: color 0.3s ease;
+}
+
+
+.price-box:hover {
+    border-color: var(--branco); 
+}
+
+.price-box:hover span {
+    color: var(--dourado) !important;
+}
+
+/* Os itens de baixo (Área, Suítes, etc.) */
+
+.spec-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 17px 0;
+    border-bottom: 1px solid #eee;
+    color: #333; 
+}
+
+.spec-item strong {
+    color: var(--dourado); 
+}
+
+.btn-main {
+    width: 100%;
+    background: var(--dark);
+    color: white;
+    border: none;
+    padding: 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: 0.4s;
+    margin-top: 40px;
+}
+
+.btn-main:hover { background: var(--dourado); }
+
+
+
+
+/*-------- RODAPE -------*/
+
+.footer {
+  background: var(--preto) !important;
+  color: var(--branco);
+  text-align: center;
+  padding: 30px;
+}
+
+.footer1 {
+   background: var(--preto);
+   color: var(--dourado);
+   text-align: center;
+}
+
+
+/* ============================================================
+   OTIMIZAÇÃO RESPONSIVA FINAL (MOBILE)
+   ============================================================ */
+@media (max-width: 850px) {
+
+    /* 1. CONFIGURAÇÃO DE PÁGINA E FUNDO */
+    html, body {
+        background-color: white !important;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+        height: auto;
+    }
+
+    /* 2. CABEÇALHO COMPACTO (IGUAL ÀS OUTRAS PÁGINAS) */
+    .cabeçalho {
+        height: 60px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 10px;
+        background: black;
+    }
+
+    .cabeçalho_logo img {
+        height: 150px !important; /* Ajuste para o logo não ser cortado */
+        width: auto !important;
+    }
+
+    .cabeçalho_nav {
+        display: flex;
+        gap: 8px;
+    }
+
+    .cabeçalho_link {
+        font-size: 9px;
+        letter-spacing: 0.5px;
+        padding: 0;
+        white-space: nowrap;
+    }
+
+    /* 3. HERO SECTION (REDUZIDA) */
+    .hero {
+        height: 50vh; /* Ocupa metade do ecrã no telemóvel */
+    }
+
+    .hero-overlay h1 {
+        font-size: 26px !important;
+    }
+
+    .tagline {
+        font-size: 14px;
+        padding: 0 20px;
+    }
+
+    /* 4. CONTENTOR PRINCIPAL */
+    .container {
+        margin: -40px 15px 30px 15px; /* Sobe um pouco sobre o hero */
+        padding: 20px;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
+
+    /* 5. SLIDER (AJUSTE DE ALTURA) */
+    .slider-container {
+        height: 250px; /* Evita que a foto fique gigante e distorcida */
+        margin-bottom: 30px;
+    }
+
+    .prev, .next {
+        padding: 10px;
+        font-size: 18px;
+    }
+
+    /* 6. GRID DE DETALHES (COLUNA ÚNICA) */
+    .details-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .description h2 {
+        font-size: 24px !important;
+    }
+
+    .description p {
+        font-size: 15px;
+        text-align: left;
+    }
+
+    /* 7. CARD DE PREÇO E SPECS */
+    .info-card {
+        padding: 25px;
+        background: #fdfaf3; /* Destaque leve */
+    }
+
+    .price-box {
+        padding: 15px;
+    }
+
+    .price-box span {
+        font-size: 1.1rem !important;
+    }
+
+    .spec-item {
+        font-size: 14px;
+        padding: 12px 0;
+    }
+
+    .btn-main {
+        padding: 18px;
+        font-size: 14px;
+    }
+
+    /* 8. RODAPÉ (NOME DOURADO) */
+    .footer {
+        padding: 20px;
+        background: black !important;
+    }
+
+    .footer p {
+        font-size: 12px !important;
+        color: white;
+    }
+
+    .footer1 {
+        color: var(--dourado) !important; /* CORREÇÃO: Nome agora fica dourado */
+        font-weight: bold;
+        margin-top: 10px;
+        display: block;
+    }
+}

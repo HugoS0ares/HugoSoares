@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<!--
+========================================
+LIÇÃO 11.1: Eventos Básicos
+========================================
+
+Eventos permitem reagir a ações do utilizador:
+- click: clique do rato
+- submit: envio de formulário
+- keydown: tecla pressionada
+- mouseover: rato passa por cima
+========================================
+-->
+<html lang="pt">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>JS: Eventos Básicos</title>
+  <style>
+    body {
+      font-family: system-ui, sans-serif;
+      max-width: 700px;
+      margin: 40px auto;
+      padding: 20px;
+    }
+    h1 { color: #8b5cf6; }
+    .demo {
+      background: #f1f5f9;
+      padding: 20px;
+      margin: 15px 0;
+      border-radius: 8px;
+    }
+    button {
+      padding: 12px 24px;
+      margin: 5px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 14px;
+      transition: transform 0.1s;
+    }
+    button:active { transform: scale(0.95); }
+    .btn-roxo { background: #8b5cf6; color: white; }
+    .btn-verde { background: #10b981; color: white; }
+    .caixa-hover {
+      width: 200px;
+      height: 100px;
+      background: #dbeafe;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 8px;
+      transition: all 0.3s;
+    }
+    .caixa-hover:hover {
+      background: #3b82f6;
+      color: white;
+    }
+    #contador {
+      font-size: 2rem;
+      font-weight: bold;
+      color: #8b5cf6;
+    }
+    input {
+      padding: 10px;
+      font-size: 16px;
+      border: 2px solid #e2e8f0;
+      border-radius: 6px;
+      width: 200px;
+    }
+    input:focus {
+      outline: none;
+      border-color: #8b5cf6;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Lição 11.1: Eventos</h1>
+
+  <!-- Exemplo 1: Click -->
+  <section class="demo">
+    <h2>1. Evento Click</h2>
+    <p>Contador: <span id="contador">0</span></p>
+    <button class="btn-roxo" id="btn-mais">+ Adicionar</button>
+    <button class="btn-verde" id="btn-reset">Reset</button>
+  </section>
+
+  <!-- Exemplo 2: Input -->
+  <section class="demo">
+    <h2>2. Evento Input</h2>
+    <input type="text" id="campo-nome" placeholder="Escreve o teu nome">
+    <p>Olá, <span id="nome-display">...</span>!</p>
+  </section>
+
+  <!-- Exemplo 3: Hover -->
+  <section class="demo">
+    <h2>3. Eventos Mouse</h2>
+    <div class="caixa-hover" id="caixa-mouse">
+      Passa o rato aqui
+    </div>
+    <p id="estado-mouse">Estado: fora da caixa</p>
+  </section>
+
+  <!-- Exemplo 4: Teclado -->
+  <section class="demo">
+    <h2>4. Evento Teclado</h2>
+    <input type="text" id="campo-tecla" placeholder="Carrega numa tecla">
+    <p>Última tecla: <span id="tecla-display">-</span></p>
+  </section>
+
+  <script src="Aula3.js"></script>
+</body>
+</html>

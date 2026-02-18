@@ -1,0 +1,109 @@
+body{
+    font-family: system-ui, sans-serif;
+    margin: 24px;
+    background: gainsboro;
+}
+
+h1 {
+    color: blue;
+    margin-bottom: 24px;
+}
+
+.exemplo {
+    background: white;
+    padding: 20px;
+    margin-bottom: 24px;
+    border-radius: 8px;
+}
+
+.exemplo h2 {
+    color: blue;
+    margin-top: 0;
+}
+
+.caixa-normal {
+    display: inline-block;
+    width: 100px;
+    padding: 15px;
+    background: rgb(225, 225, 225);
+    text-align: center;
+    border-radius: 4px;
+}
+
+.caixa-relative {
+    display: inline-block;
+    position: relative;
+    top: 20px;
+    left: 30px;
+    width: 200px;
+    padding: 15px;
+    background: orange;
+    color: white;
+    text-align: center;
+    border-radius: 4px;
+}
+
+.card {
+    position: relative;
+    width: 200px;
+    padding: 20px;
+    background: white;
+    border: 1px solid black;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(red, green, blue, alpha);
+}
+
+.badge {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background-color: #ef4444;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.preco {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #0a66c2;
+    margin: 0;
+}
+
+.container{
+    position: relative;
+    height: 200px;
+    background: #dbeafe;
+    border-radius: 8px;
+
+}
+.container div {
+    position: absolute;
+    background: #0a66c2;
+    color: white;
+    padding: 10px;
+    border-radius: 4px;
+    font-size: 8px;
+}
+
+.pos-topo-esq {
+    top: 10px;
+    left: 10px;
+}
+
+.pos-topo-dir {
+    top: 10px;
+    right: 10px;
+}
+
+.pos-baixo-esq {
+    bottom: 10px;
+    left: 10px;
+}
+
+.pos-baixo-dir {
+    bottom: 10px;
+    right: 10px;
+}

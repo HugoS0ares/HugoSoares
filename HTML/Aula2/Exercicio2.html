@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title><strong>FORMULÁRIO</strong></title>
+</head>
+    <br>
+    <h1><strong>FORMULÁRIO DE CONTACTO</strong></h1>
+    <br>
+    <hr>
+<body>
+    <h2></h2>
+    <!-- ISTO É UM FORMULÁRIO-->
+
+    <div>
+        <h3>Formulário Básico</h3>
+    <form action="">
+        <label for="Nome"><strong>Nome Completo</strong></label>
+        <input type="text" id="Nome" name="Nome" placeholder="Digita aqui o teu nome" required minlength="5" maxlength="50">
+<br>
+        <label for="Email"><strong>Email</strong></label>
+        <input type="Email" id="Email" name="Email" placeholder="Digite aqui o seu email" required>
+<br>
+        <label for="password"><strong>Password</strong></label>
+        <input type="password" id="password" name="password" placeholder="Coloque a sua password" required minlength="8">
+<br>
+        <label for="Idade"><strong>Idade</strong></label>
+        <input type="number" id="Idade" name="Idade" placeholder="Introduza a sua idade:+18" required minlength="18" maxlength="100" step="1">
+ <br>
+        <label for="data_Nascimento"><strong>Data de Nascimento</strong></label>
+        <input type="date" id="Nascimento" name="Nascimento" required>
+<br> 
+        <label for="País"><strong>País</strong></label>
+            <select id="País" name="país" required>
+                <option value="">Selecione um país></option>
+                <option value="Portugal">Portugal</option>~
+                <option value="Brazil">Brazil</option>
+                <option value="Espanha">Espanha</option>
+        </select>
+ <br>
+        <label for="Sexo"><strong>Sexo</strong></label>
+
+        <input type="radio" id="Masculino" name="Sexo" value="Masculino">
+        <label for="Masculino">Masculino</label>
+        <input type="radio" id="Femenino" name="Sexo" value="Femenino">
+        <label for="Femenino">Femenino</label>
+   <br>
+        <label for=""><strong>Interesses (selecione todos os que se aplicam)</strong></label>
+
+        <input type="checkbox" id="musica" name="Interesses" value="musica">
+        <label for="musica">Música</label>
+        <input type="checkbox" id="Leitura" name="Interesses" value="Leitura">
+        <label for="Leitura">Leitura</label>
+        <input type="checkbox" id="Desporto" name="Interesses" value="Desporto">
+        <label for="Desporto">Desporto</label>
+    <br>
+        <label for="experiência"><strong>Anos de experiência</strong></label>
+        <input type="range" id="experiência" name="experiência" min="0" max="20" value="0">
+    <br>
+    <br>
+        <button type="submit"><strong>Enviar Formulário</strong></button>
+        <button type="reset"><strong>Apagar os Dados</strong></button>
+    </form>
+    </div>
+<br>
+<hr>
+   <h3> A Minha Biografia</h3>
+   <img src="hugo.jpg" alt="Minha Fotgrafia" width="100" height="100">
+<br>
+   <a href="Exercicio1.html" target="_blank" title="tooltip"> Aceder à minha Biografia</a>
+<br>
+<hr>
+<footer>
+            <p>&copy;Entre em contacto</p>
+</footer>       
+</body>
+</html>
+    

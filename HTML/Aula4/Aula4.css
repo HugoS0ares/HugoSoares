@@ -1,0 +1,27 @@
+
+body{
+    background-color: blueviolet;
+}
+
+.caixa{
+    width: 120px;
+    height: 80px;
+    margin: 8px;
+    background: white;
+    text-align: center;
+    line-height: 80px;
+    font-family: sans-serif;
+}
+.incline {
+    display: inline-block;
+}
+
+.fixo{
+    position: fixed;
+    bottom: 12px;
+    right: 12px;
+    background-color: blue;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 4px;
+} 

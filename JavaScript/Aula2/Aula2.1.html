@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <!-- Metadados base -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>10.3 Lite - Lista de Tarefas</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 720px;
+      margin: 32px auto;
+      padding: 0 16px 24px;
+      background: #f8fafc;
+    }
+    .card {
+      background: #fff;
+      border: 1px solid #dbe2ea;
+      border-radius: 10px;
+      padding: 16px;
+      margin-top: 16px;
+    }
+    label {
+      display: block;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+    input, button {
+      font: inherit;
+    }
+    input {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #cbd5e1;
+      border-radius: 8px;
+      margin-bottom: 10px;
+    }
+    button {
+      border: none;
+      border-radius: 8px;
+      padding: 10px 12px;
+      cursor: pointer;
+      background: #2563eb;
+      color: #fff;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    li {
+      border: 1px solid #dbe2ea;
+      border-radius: 8px;
+      padding: 10px;
+      margin-top: 8px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+    }
+    .btn-remover {
+      background: #e2e8f0;
+      color: #0f172a;
+    }
+  </style>
+</head>
+<body>
+  <h1>10.3 Lite - Lista de Tarefas</h1>
+  <p>Versao minima para iniciantes: adicionar, listar e remover.</p>
+
+  <section class="card">
+    <h2>Adicionar tarefa</h2>
+    <form id="form-tarefa" novalidate>
+      <label for="titulo">Titulo</label>
+      <input id="titulo" type="text" placeholder="Ex.: Estudar DOM" required />
+      <button type="submit">Adicionar</button>
+    </form>
+    <p id="feedback" aria-live="polite"></p>
+  </section>
+
+  <section class="card">
+    <h2>Tarefas</h2>
+    <ul id="lista-tarefas"></ul>
+  </section>
+
+  <script src="Aula2.1.js"></script>
+</body>
+</html>

@@ -1,0 +1,105 @@
+    <!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Domus Premium | Hugo Soares</title>
+    <link rel="stylesheet" href="Villa.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="cabeçalho">
+        <div class="cabeçalho_logo">
+              <a href="SobreNos.html">
+              <img src="imagensProjeto/logopreto.png" alt="DomusPremium">
+              </a>
+        </div>
+
+        <nav class="cabeçalho_nav">
+            <a class="cabeçalho_link" href="DomusPremium.html">Início</a>
+            <a class="cabeçalho_link cabeçalho_link--active" href="Imoveis.html">Imóveis</a>
+            <a class="cabeçalho_link" href="SobreNos.html">Sobre Nós</a>
+            <a class="cabeçalho_link" href="Contacto.html">Contacto</a>
+        </nav>
+    </header>
+
+   <header class="hero">
+        <div class="hero-overlay">
+            <h1>Villa Ocean Horizon</h1>
+            <p class="location">PRAIA DA MARINHA, ALGARVE</p>
+            <div class="divider"></div>
+            <p class="tagline">Experiência única de luxo à beira-mar com vistas panorâmicas de 360°</p>
+        </div>
+    </header>
+
+    <main class="container">
+        
+        <section class="slider-section">
+            <div class="slider-container">
+                <div class="slider">
+                    <div class="slide active"><img src="imagensProjeto/casa6.jpg" alt="Vista Exterior"></div>
+                    <div class="slide"><img src="imagensProjeto/vista.webp" alt="vista Luxo"></div>
+                    <div class="slide"><img src="imagensProjeto/cozinha.webp" alt="Cozinha Luxo"></div>
+                    <div class="slide"><img src="imagensProjeto/quartonovo.jpg" alt="Suíte Master"></div>
+                    <div class="slide"><img src="imagensProjeto/banho.webp" alt="Casa de banho"></div>
+                    <div class="slide"><img src="imagensProjeto/spa.avif" alt="Piscina Infinita"></div>
+                    
+                </div>
+                <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+                <button class="next" onclick="changeSlide(1)">&#10095;</button>
+                
+                <div class="dots">
+                    <span class="dot active" onclick="currentSlide(0)"></span>
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                    <span class="dot" onclick="currentSlide(4)"></span>
+                    <span class="dot" onclick="currentSlide(5)"></span>
+                    <span class="dot" onclick="currentSlide(6)"></span>
+                </div>
+            </div>
+        </section>
+
+        <section class="details-grid">
+            <div class="description">
+                <h2>O Conceito</h2>
+                <p>Situada majestosamente sobre as falésias douradas da Praia da Marinha, a Villa Ocean Horizon é um manifesto de design e exclusividade. Construída com uma filosofia de arquitetura invisível, as paredes de vidro eliminam as barreiras entre si e o Atlântico.</p>
+                
+                <h3>Destaques Exclusivos</h3>
+                <br>
+
+                <ul class="luxury-list">
+                    <li><strong>Sky Deck 360°:</strong> Terraço panorâmico com fire-pit.</li>
+                    <li><strong>Infinity Edge:</strong> Piscina de 25m com água salgada aquecida.</li>
+                    <li><strong>Wellness Center:</strong> Spa completo, sauna e ginásio privado.</li>
+                    <li><strong>Smart Home:</strong> Tecnologia de 2026 controlada por voz.</li>
+                </ul>
+            </div>
+
+            <aside class="info-card">
+                <div class="price-box">
+                    <span>15.200.000€</span>
+                </div>
+                <div class="specs">
+                    <div class="spec-item"><strong>Área:</strong> 1.450 m²</div>
+                    <div class="spec-item"><strong>Lote:</strong> 6.200 m²</div>
+                    <div class="spec-item"><strong>Suítes:</strong> 7</div>
+                </div>
+                <button class="btn-main">AGENDAR VISITA PRIVADA</button>
+            </aside>
+        </section>
+
+    </main>
+
+          <script src="Villa.js"></script>
+
+    <footer class="footer">
+        <p>© 2018 DomusPremium. Todos os direitos reservados.
+            Se tiver alguma dúvida, não hesite em entrar em Contacto.
+        </p>
+        <p class="footer1">Design by Hugo Soares</p>
+    </footer>
+
+</body>
+</html>

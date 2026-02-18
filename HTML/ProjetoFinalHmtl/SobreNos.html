@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Domus Premium | Hugo Soares</title>
+    <link rel="stylesheet" href="SobreNos.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="cabeçalho">
+        <div class="cabeçalho_logo">
+            <a href="DomusPremium.html">
+                <img src="imagensProjeto/logopreto.png" alt="DomusPremium">
+            </a>
+        </div>
+
+        <nav class="cabeçalho_nav">
+            <a class="cabeçalho_link" href="DomusPremium.html">Início</a>
+            <a class="cabeçalho_link" href="Imoveis.html">Imóveis</a>
+            <a class="cabeçalho_link cabeçalho_link--active" href="SobreNos.html">Sobre Nós</a>
+            <a class="cabeçalho_link" href="Contacto.html">Contacto</a>
+        </nav>
+    </header>
+
+    <div class="container1">
+        <section class="sobre_nos">
+            <h1>DomusPremium</h1>
+            <h2>A Nossa História</h2>
+            <p>Fundada em 2018, a DomusPremium nasceu da necessidade de elevar o padrão do imobiliário de luxo em Portugal Num mercado em constante mutação, percebemos que a exclusividade não reside apenas no valor do imóvel, mas na singularidade da experiência. Desde o nosso primeiro dia, em Lisboa, que nos dedicamos a transformar o processo de aquisição de património numa jornada fluida, privada e profundamente personalizada.</p>
+        </section>
+
+        <section class="conteudo_extra">
+            <h2>Quem Somos</h2>
+            <p>Somos uma equipa multidisciplinar de especialistas apaixonados pela arquitetura pelo design e pelo território português. Mais do que consultores imobiliários, somos embaixadores do Lifestyle lusitano. Combinamos o conhecimento profundo do mercado local com uma visão global, permitindo-nos comunicar com investidores e famílias de todos os cantos do mundo que procuram em Portugal o seu próximo refúgio.</p>
+
+            <h2>O que Fazemos</h2>
+            <h3>A nossa atuação foca-se em três pilares fundamentais:</h3>
+            
+            <p><strong>Exclusividade:</strong> Não listamos apenas propriedades; selecionamos obras de arte arquitetónicas desde palacetes históricos no Chiado a moradias ultra-modernas na Quinta do Lago, o nosso portfólio é rigorosamente filtrado.</p>
+            <p><strong>Estratégia:</strong> Acompanhamos o cliente desde a análise de investimento e viabilidade jurídica, garantindo que cada decisão é sólida e segura.</p>
+            <p><strong>Serviço Concierge:</strong> O seu tempo é o nosso valor. Na DomusPremium, a nossa relação não termina na entrega das chaves, Por isso, oferecemos um serviço chave-na-mão que cuida de todos os detalhes, antes e depois da venda.</p>
+        </section>
+
+        <section class="conteudo_extra1">
+            <h2>O Nosso Compromisso</h2>
+            <p>Na DomusPremium, acreditamos que uma casa é o cenário onde a vida acontece. Por isso, o nosso compromisso é a excelência sem concessões. Seja para residência própria ou investimento de alto rendimento, estamos aqui para garantir que o seu lugar em Portugal é nada menos que impecável.</p>
+        </section>
+    </div>
+
+
+   <section class="testimonials-section">
+    <h2 class="section-title">O que dizem os nossos clientes</h2>
+    
+    <div class="testimonials-container">
+        <button class="test-prev" onclick="moveTestimonials(-1)">&#10094;</button>
+        
+        <div class="testimonials-wrapper">
+            <div class="testimonials-slider" id="testimonialSlider">
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"Profissionalismo impecável. A Domus Premium elevou a fasquia no mercado de luxo."</p>
+                    <div class="client-info"><strong>Carlos Santos</strong><span>CEO Tech</span></div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"A discrição e a rapidez no fecho do negócio foram fundamentais para mim."</p>
+                    <div class="client-info"><strong>Marta Vieira</strong><span>Investidora</span></div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"O acompanhamento personalizado do Hugo Soares faz toda a diferença."</p>
+                    <div class="client-info"><strong>Dr. André Lima</strong><span>Advogado</span></div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"Marketing imobiliário de outro nível. A minha casa foi vendida em tempo recorde."</p>
+                    <div class="client-info"><strong>Sofia Mendes</strong><span>Arquiteta</span></div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"Excelente visão de mercado e honestidade em todo o processo de compra."</p>
+                    <div class="client-info"><strong>João Ferreira</strong><span>Empresário</span></div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"A melhor imobiliária de luxo em Portugal. Superaram todas as expectativas."</p>
+                    <div class="client-info"><strong>Helena Rocha</strong><span>Designer</span></div>
+                </div>
+            </div>
+        </div>
+
+        <button class="test-next" onclick="moveTestimonials(1)">&#10095;</button>
+    </div>
+</section>
+
+    <footer class="footer">
+        <p>© 2018 DomusPremium. Todos os direitos reservados.
+            Se tiver alguma dúvida, não hesite em entrar em Contacto.
+        </p>
+        <p class="footer1">Design by Hugo Soares</p>
+    </footer>
+     <script src="SobreNos.js"></script>
+
+</body>
+</html>

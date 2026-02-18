@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <!-- Metadados base -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>11.1 Eventos Avancados</title>
+  <style>
+    /* Layout principal */
+    body { font-family: Arial, sans-serif; max-width: 840px; margin: 32px auto; padding: 0 16px; }
+    /* Cartao de secao */
+    .card { border: 1px solid #dbe2ea; border-radius: 10px; padding: 16px; margin-top: 16px; }
+    /* Lista sem bullets */
+    ul { list-style: none; padding: 0; margin: 0; }
+    /* Item de alerta */
+    li { border: 1px solid #dbe2ea; border-radius: 8px; padding: 10px; margin-top: 10px; display: flex; justify-content: space-between; align-items: center; }
+    /* Botao base */
+    button { border: none; border-radius: 8px; padding: 8px 10px; cursor: pointer; }
+    /* Cartao clicavel para demonstrar propagacao */
+    .cartao-alerta { border: 1px solid #dbe2ea; border-radius: 8px; padding: 12px; margin-top: 10px; }
+  </style>
+</head>
+<body>
+  <!-- Cabecalho da aula -->
+  <h1>11.1 - Eventos Avancados</h1>
+  <p>Abre a consola para observar os logs dos eventos.</p>
+
+  <!-- Bloco 1: delegacao de eventos na lista -->
+  <section class="card">
+    <h2>Delegacao de eventos</h2>
+    <ul id="lista-alertas">
+      <li data-alerta="ALR-001">
+        <span>ALR-001 - Login suspeito</span>
+        <button type="button" data-acao="fechar">Fechar</button>
+      </li>
+      <li data-alerta="ALR-002">
+        <span>ALR-002 - Tentativa de brute force</span>
+        <button type="button" data-acao="fechar">Fechar</button>
+      </li>
+      <li data-alerta="ALR-003">
+        <span>ALR-003 - Pico de trafego</span>
+        <button type="button" data-acao="fechar">Fechar</button>
+      </li>
+    </ul>
+  </section>
+
+  <!-- Bloco 2: submit com preventDefault -->
+  <section class="card">
+    <h2>Submit com preventDefault</h2>
+    <form id="form-pesquisa-alertas">
+      <label for="termo">Termo de pesquisa</label>
+      <input id="termo" type="text" placeholder="Ex.: login" />
+      <button type="submit">Pesquisar</button>
+    </form>
+  </section>
+
+  <!-- Bloco 3: propagacao e stopPropagation -->
+  <section class="card">
+    <h2>stopPropagation em cartao clicavel</h2>
+    <article class="cartao-alerta" data-id="C-01">
+      <p>Cartao C-01</p>
+      <button type="button" data-acao="acao-rapida">Acao rapida</button>
+    </article>
+    <article class="cartao-alerta" data-id="C-02">
+      <p>Cartao C-02</p>
+      <button type="button" data-acao="acao-rapida">Acao rapida</button>
+    </article>
+  </section>
+
+  <!-- Script da licao -->
+  <script src="11.1_eventos_avancados.js"></script>
+</body>
+</html>

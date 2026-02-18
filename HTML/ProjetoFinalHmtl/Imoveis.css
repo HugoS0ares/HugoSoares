@@ -1,0 +1,371 @@
+/* -- Variáveis e Reset -- */
+:root {
+  --preto: #111111;
+  --branco: #ffffff;
+  --dourado: #d4af37;
+  --cinza: #666666;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: white;
+  background-color: #f4f4f4;
+}
+
+/* -- Cabeçalho -- */
+.cabeçalho {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+  background: black;
+  width: 100%;
+  overflow: hidden;
+}
+
+.cabeçalho_logo img {
+  height: 100%;
+  max-height: 400px;
+  width: auto;
+  object-fit: contain;
+}
+
+.cabeçalho_nav {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.cabeçalho_link {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  position: relative;
+  padding: 25px 0;
+  transition: color 0.3s ease;
+}
+
+.cabeçalho_link::after {
+  content: "";
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background: var(--dourado);
+  transition: width 0.3s ease-in-out;
+}
+
+.cabeçalho_link:hover {
+  color: var(--dourado);
+}
+
+.cabeçalho_link:hover::after,
+.cabeçalho_link--active::after {
+  width: 100%;
+}
+
+/*----------- CASAS (Slider) -------------*/
+.casas {
+  padding: 50px 0;
+}
+
+.casas_title {
+  font-family: 'Playfair Display', serif;
+  font-size: 52px;
+  margin-bottom: 40px;
+  text-align: center;
+  color: #111;
+  -webkit-text-stroke: 1px var(--dourado); 
+}
+
+.slider-wrapper-main {
+  display: flex;
+  align-items: center;
+  max-width: 1600px; /* Alargado para os cards não serem finos */
+  margin: 0 auto;
+}
+
+.imoveis-overflow {
+  overflow: hidden;
+  width: 100%;
+}
+
+.imoveis-slider {
+  display: flex;
+  transition: transform 0.8s cubic-bezier(0.45, 0, 0.55, 1);
+}
+
+.imoveis-page {
+  min-width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto auto; 
+  align-items: start; 
+  gap: 30px;
+  padding: 20px;
+}
+
+/* -- Card -- */
+.card {
+  background-color: white;
+  position: relative;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  display: flex;
+  flex-direction: column;
+  height: auto; 
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+}
+
+.card_image {
+  width: 100%;
+  height: 260px; 
+  object-fit: cover;
+}
+
+.card_price {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: rgba(17, 17, 17, 0.9);
+  color: var(--dourado);
+  padding: 8px 15px;
+  font-size: 15px;
+  border-radius: 4px;
+}
+
+.card_info {
+  padding: 25px;
+  color: #333;
+}
+
+.card_title {
+  font-family: 'Playfair Display', serif;
+  font-size: 22px;
+  margin-bottom: 10px;
+  color: #111;
+}
+
+.card_location {
+  color: #666;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.card_text {
+  font-size: 15px;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* -- Navegação -- */
+.test-prev,
+.test-next {
+  background: transparent;
+  color: #111;
+  border: none;
+  font-size: 50px;
+  cursor: pointer;
+  padding: 20px;
+  transition: 0.3s;
+}
+
+.test-prev:hover,
+.test-next:hover {
+  color: var(--dourado);
+}
+
+/* -- Rodapé -- */
+.footer {
+  background: #111111;
+  color: var(--branco);
+  text-align: center;
+  padding: 30px;
+}
+
+.footer1 {
+  color: var(--dourado);
+}
+
+/* --- RESPONSIVIDADE --- */
+/* ============================================================
+   OTIMIZAÇÕES PARA DISPOSITIVOS MÓVEIS (MOBILE)
+   ============================================================ */
+/* ============================================================
+   OTIMIZAÇÕES PARA DISPOSITIVOS MÓVEIS (MOBILE)
+   ============================================================ */
+@media (max-width: 850px) {
+    
+    /* 1. CONFIGURAÇÃO DE PÁGINA (FUNDO BRANCO) */
+    html, body {
+        background-color: white !important;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden; /* Impede que a página balance para os lados */
+        height: auto;
+    }
+
+    /* 2. O TEU CABEÇALHO (INTACTO COMO PEDISTE) */
+    .cabeçalho {
+        height: 60px; 
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 10px;
+        overflow: hidden;
+        background-color: black;
+    }
+
+    .cabeçalho_logo {
+        height: auto;
+        width: 130px;
+        overflow: hidden; 
+        display: flex;
+        align-items: center;
+        flex-shrink: 0;
+        justify-content: flex-start;
+    }
+
+    .cabeçalho_logo img {
+        height: 150px !important;
+        width: auto !important;
+        position: static;
+        max-height: none !important;
+        transform: translateY(0);
+        object-fit: contain;
+    }
+
+    .cabeçalho_nav {
+        display: flex;
+        gap: 8px;
+        justify-content: flex-end;
+        flex-grow: 1;
+    }
+
+    .cabeçalho_link {
+        font-size: 9px;
+        letter-spacing: 0.5px;
+        padding: 0;
+        white-space: nowrap;
+        color: white;
+    }
+
+    /* 3. SECÇÃO DE CASAS (DUAS FILAS E TEXTO VISÍVEL) */
+    .casas {
+        padding: 20px 0;
+        background-color: white;
+    }
+
+    .casas_title {
+        font-size: 25px;
+        margin-left: 15px;
+        margin-bottom: 15px;
+        color: black;
+    }
+
+    .imoveis-overflow {
+        overflow-x: auto;
+        padding: 10px 15px 25px 15px;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .imoveis-slider {
+        display: flex !important;
+        flex-direction: column; /* Cria as 2 filas */
+        flex-wrap: wrap;       /* Faz as casas saltarem para o lado */
+        height: 600px;         /* Altura ideal para 2 filas com texto */
+        width: max-content;    /* Faz o scroll horizontal funcionar */
+    }
+
+    .imoveis-page {
+        display: contents !important; /* Liberta os cards para o slider */
+    }
+
+    /* 4. CARDS (MAIORES E COM TEXTO) */
+    .card {
+        min-width: 250px; 
+        max-width: 250px;
+        height: 280px; /* Altura para caber Imagem + Título + Texto */
+        margin-right: 15px;
+        margin-bottom: 20px;
+        flex-shrink: 0;
+        background: #ffffff;
+        border: 1px solid #eee; /* Borda leve para destacar no fundo branco */
+        box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+
+    .card_image {
+        height: 140px !important;
+        object-fit: cover;
+    }
+
+    .card_info {
+        padding: 10px;
+    }
+
+    .card_title {
+        font-size: 14px !important;
+        color: black;
+        margin-bottom: 4px;
+    }
+
+    .card_text {
+        display: -webkit-box !important;
+        -webkit-line-clamp: 2; /* Mostra 2 linhas de descrição */
+        line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        font-size: 11px !important;
+        color: #666;
+        line-height: 1.3;
+    }
+
+    .card_location {
+        font-size: 10px !important;
+        color: #c5a059; /* Cor dourada */
+    }
+
+    /* Esconder botões de seta no Mobile */
+    .test-prev, .test-next {
+        display: none;
+    }
+
+    /* 5. O TEU RODAPÉ (INTACTO COMO PEDISTE) */
+    .footer {
+        padding: 10px;
+        background: black;
+        width: 100%;
+        color: white;
+    }
+
+    .footer p {
+        font-size: 12px !important;
+        line-height: 1.2;
+        margin: 6px;
+    }
+
+    .footer1 {
+        font-size: 11px !important;
+        margin-top: 6px;
+    }
+}

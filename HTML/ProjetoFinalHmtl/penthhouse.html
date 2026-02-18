@@ -1,0 +1,105 @@
+    <!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Domus Premium | Hugo Soares</title>
+    <link rel="stylesheet" href="penthhouse.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="cabeçalho">
+        <div class="cabeçalho_logo">
+              <a href="SobreNos.html">
+              <img src="imagensProjeto/logopreto.png" alt="DomusPremium">
+              </a>
+        </div>
+
+        <nav class="cabeçalho_nav">
+            <a class="cabeçalho_link" href="DomusPremium.html">Início</a>
+            <a class="cabeçalho_link cabeçalho_link--active" href="Imoveis.html">Imóveis</a>
+            <a class="cabeçalho_link" href="SobreNos.html">Sobre Nós</a>
+            <a class="cabeçalho_link" href="Contacto.html">Contacto</a>
+        </nav>
+    </header>
+
+   <header class="hero">
+        <div class="hero-overlay">
+            <h1>Penthouse Premium</h1>
+            <p class="location">Foz do Douro, Porto</p>
+            <div class="divider"></div>
+            <p class="tagline">Um refúgio suspenso entre o rio e o mar, com o rooftop mais exclusivo da cidade.</p>
+        </div>
+    </header>
+
+    <main class="container">
+        
+        <section class="slider-section">
+            <div class="slider-container">
+                <div class="slider">
+                    <div class="slide active"><img src="imagensProjeto/casa7.jpg" alt="Vista Exterior"></div>
+                    <div class="slide"><img src="imagensProjeto/240829_image001.jpg" alt="vista Luxo"></div>
+                    <div class="slide"><img src="imagensProjeto/cozinha.webp" alt="Cozinha Luxo"></div>
+                    <div class="slide"><img src="imagensProjeto/quartonovo.jpg" alt="Suíte Master"></div>
+                    <div class="slide"><img src="imagensProjeto/banho.webp" alt="Casa de banho"></div>
+                    <div class="slide"><img src="imagensProjeto/spa.avif" alt="Piscina Infinita"></div>
+                    
+                </div>
+                <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+                <button class="next" onclick="changeSlide(1)">&#10095;</button>
+                
+                <div class="dots">
+                    <span class="dot active" onclick="currentSlide(0)"></span>
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                    <span class="dot" onclick="currentSlide(4)"></span>
+                    <span class="dot" onclick="currentSlide(5)"></span>
+                    <span class="dot" onclick="currentSlide(6)"></span>
+                </div>
+            </div>
+        </section>
+
+     <section class="details-grid">
+    <div class="description">
+        <h2>O Conceito</h2>
+        <p>Localizada na prestigiada Foz do Douro, a Penthouse Premium é a definição de exclusividade urbana. Este refúgio suspenso entre o rio e o mar foi desenhado para quem procura o topo do mundo, oferecendo uma experiência de vida onde a linha do horizonte é a sua única fronteira.</p>
+        
+        <h3>Destaques Exclusivos</h3>
+        <br>
+
+        <ul class="luxury-list">
+            <li><strong>Private Rooftop:</strong> Terraço privado com lounge, jacuzzi e uma vista inigualável sobre a foz.</li>
+            <li><strong>Private Elevator:</strong> Acesso direto e codificado do lobby até ao interior da habitação.</li>
+            <li><strong>Chef's Kitchen:</strong> Cozinha profissional equipada com tecnologia de ponta e garrafeira climatizada.</li>
+            <li><strong>Master Suite Ocean View:</strong> Quarto principal com janelas do chão ao teto e spa privativo.</li>
+        </ul>
+    </div>
+
+    <aside class="info-card">
+        <div class="price-box">
+            <span>5.299.999€</span>
+        </div>
+        <div class="specs">
+            <div class="spec-item"><span>Área:</span> <strong>385 m²</strong></div>
+            <div class="spec-item"><span>Terraço:</span> <strong>120 m²</strong></div>
+            <div class="spec-item"><span>Suítes:</span> <strong>3</strong></div>
+        </div>
+        <button class="btn-main">AGENDAR VISITA PRIVADA</button>
+    </aside>
+</section>
+
+    </main>
+
+          <script src="penthhouse.js"></script>
+
+    <footer class="footer">
+        <p>© 2018 DomusPremium. Todos os direitos reservados.
+            Se tiver alguma dúvida, não hesite em entrar em Contacto.
+        </p>
+        <p class="footer1">Design by Hugo Soares</p>
+    </footer>
+
+</body>
+</html>
