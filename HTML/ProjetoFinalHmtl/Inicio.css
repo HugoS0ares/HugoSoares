@@ -64,6 +64,9 @@
     display: flex;
     flex-direction: column;
     gap: 15px;
+    align-items: center;
+    margin: 0 auto;
+    gap: 15px;
 }
 
 /* --- ESTILO 2: CAIXA DE LOGIN/REGISTO (Fundo Preto) --- */
@@ -150,6 +153,7 @@
     cursor: pointer;
     transition: 0.3s;
     text-align: center;
+    box-sizing: border-box;
 }
 
 .btn-luxo:hover {
@@ -172,6 +176,7 @@
     cursor: pointer;
     transition: 0.3s;
     text-align: center;
+    box-sizing: border-box;
 }
 
 .btn-luxo-outline:hover {
