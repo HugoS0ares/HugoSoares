@@ -1,0 +1,482 @@
+
+:root{
+--Azulescuro:   #0b3c5d;
+--Turquesa:      #00a8a8;
+--Areiafundo: #f2e8cf;
+--Coral:         #ff6b6b;
+--Branco:        #ffffff;
+--Texto:         #1f2933;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, sans-serif;
+  color: #0f172a;
+  background: #f1f5f9;
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+h1, h2, h3 {
+  margin-top: 0;
+}
+
+/* ---- Header / Navbar (JA FEITO) ---- */
+
+header {
+  background: #1e293b;
+  color: #ffffff;
+  border-bottom: 3px solid #2563eb;
+}
+
+header > div {
+  max-width: 1100px;
+  width: 92%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 0;
+}
+
+header a img {
+  height: 85px;
+  width: 85px; 
+  border-radius: 50%; 
+  object-fit: cover; 
+}
+
+header nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 8px;
+}
+
+header nav a {
+  padding: 8px 14px;
+  border-radius: 6px;
+  font-size: 0.95rem;
+}
+
+header nav a:hover {
+  background: var(--Azulescuro);
+}
+
+/* ---- Footer (JA FEITO) ---- */
+
+footer {
+  background: #0f172a;
+  color: #ffffff;
+  margin-top: 40px;
+  padding: 28px 0;
+}
+
+footer > div {
+  max-width: 1100px;
+  width: 92%;
+  margin: 0 auto;
+  display: flex;
+  gap: 20px;
+}
+
+footer > div > div {
+  flex: 1;
+}
+
+footer a:hover {
+  color: #2563eb;
+}
+
+/* ========================================
+   ESCREVE O TEU CSS A PARTIR DAQUI
+   ======================================== */
+
+
+/* ---- Classes Gerais e Contentores ---- */
+
+.container {
+  max-width: 1100px;
+  width: 92%;
+  margin: 0 auto;
+  padding: 40px 0;
+}
+
+/* ---- Botões ---- */
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+  border: none;
+  transition: opacity 0.3s ease;
+}
+
+.btn:hover {
+  opacity: 0.8;
+}
+
+.btn-1 {
+  background-color: #0773a1; 
+  color: #ffffff;            
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-2 {
+  background-color: #f97b1a; 
+  color: #000000;            
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-full {
+  width: 100%;
+  display: block;
+  padding: 14px; 
+  font-size: 1rem;
+}
+
+/* ---- Secção Hero (Página Inicial) ---- */
+
+
+.hero {
+  background: var(--AzulEscuro, #0b3c5d); 
+  color: var(--Branco, #ffffff);
+}
+
+.hero-container {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  padding: 60px 0;
+}
+
+.hero-texto {
+  flex: 1;
+}
+
+.hero-texto h1 {
+  font-size: 2.5rem;
+  margin-bottom: 16px;
+  color: var(--Branco, #ffffff);
+}
+
+.hero-texto p {
+  font-size: 1.1rem;
+  margin-bottom: 24px;
+}
+
+.hero-botoes {
+  display: flex;
+  gap: 12px;
+}
+
+.hero-imagem {
+  flex: 1;
+}
+
+.hero-imagem img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+/* ---- Secção Destinos ---- */
+
+
+.destinos {
+  padding-bottom: 20px;
+}
+
+.destinos-cabecalho {
+  margin-bottom: 32px;
+}
+
+.destinos-cabecalho h2 {
+  color: var(--AzulEscuro, #0b3c5d);
+}
+
+.flex-destinos {
+  display: flex;
+  flex-wrap: wrap; 
+  gap: 24px;
+  justify-content: space-between;
+}
+
+.card {
+  background: var(--Branco, #ffffff);
+  border-radius: 8px;
+  overflow: hidden;
+  width: calc(50% - 12px); 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+}
+
+.card img {
+  width: 100%;
+  height: 270px;
+  object-fit: cover;
+}
+
+.card-conteudo {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.card-conteudo h3 {
+  color: var(--AzulEscuro, #0b3c5d);
+  margin-bottom: 8px;
+}
+
+.card-conteudo p {
+  color: var(--Texto, #1f2933);
+  margin-bottom: 16px;
+  font-size: 0.95rem;
+  flex: 1; 
+}
+
+.preco {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: var(--Turquesa, #00a8a8);
+  margin-bottom: 0;
+}
+
+/* ---- Secção Vantagens ---- */
+
+.vantagens {
+  background: var(--AreiaFundo, #f2e8cf);
+  margin-top: 50px;
+  margin-bottom: 60px;
+}
+
+.vantagens h2 {
+  margin-bottom: 20px;
+  color: var(--AzulEscuro, #0b3c5d);
+}
+
+.vantagens ul {
+  list-style: none; 
+  padding: 0;
+  margin: 0;
+  color: var(--Texto, #1f2933);
+}
+
+.vantagens li {
+  margin-bottom: 12px;
+  position: relative;
+  padding-left: 15px;
+}
+
+
+.vantagens li::before {
+  content: "•";
+  color: var(--Texto, #1f2933);
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+}
+
+/* ----Footer ---- */
+
+footer {
+    background: var(--AzulEscuro, #0b3c5d);
+}
+.footer-container {
+  display: flex;
+  gap: 20px;
+  padding: 0; 
+}
+
+.footer {
+  flex: 1;
+}
+.footer h3 { margin-bottom: 10px; color: var(--Branco, #ffffff); }
+.footer p, .footer a { color: #cbd5e1; font-size: 0.9rem; }
+
+/* ---- Página de Contacto ---- */
+
+
+.pagina-contacto {
+  padding-top: 40px;
+}
+
+.contacto-cabecalho {
+  margin-bottom: 32px;
+}
+
+.contacto-cabecalho h1 {
+  color: var(--AzulEscuro, #0b3c5d);
+}
+
+.contacto-cabecalho p {
+  color: var(--Texto, #1f2933);
+}
+
+.contacto-layout {
+  display: flex;
+  gap: 40px;
+}
+
+
+.formulario-wrapper {
+  flex: 1.5; 
+  background: var(--Branco, #ffffff);
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05); 
+}
+
+.campo-form {
+  margin-bottom: 20px;
+}
+
+.campo-form label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: var(--AzulEscuro, #0b3c5d);
+  font-size: 0.9rem;
+}
+
+.campo-form input,
+.campo-form select,
+.campo-form textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 4px;
+  font-family: inherit;
+  background: var(--Branco, #ffffff);
+  height: 48px;
+}
+
+.campo-form textarea {
+  resize: vertical;
+  height: 120px;
+}
+
+.campo-form input:focus,
+.campo-form select:focus,
+.campo-form textarea:focus {
+  outline: none;
+  border-color: var(--Turquesa, #00a8a8);
+}
+
+
+.lateral-wrapper {
+  flex: 1; 
+  display: flex;
+}
+
+.card-contacto {
+  background: var(--Branco, #ffffff);
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+  width: 100%;
+}
+
+
+
+.fundo-azul {
+  background-color: var(--AzulEscuro, #0b3c5d);
+  padding: 5px 5px; 
+  border-radius: 8px;
+  margin-bottom: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.logo-redondo {
+  height: 250px;
+  width: 250px; 
+  border-radius: 50%; 
+  object-fit: cover; 
+  background-color: var(--Azulescuro);
+}
+
+.card-contacto h3 {
+  margin-bottom: 16px;
+  color: var(--AzulEscuro, #0b3c5d);
+}
+
+.card-contacto p {
+  margin-bottom: 12px;
+  color: var(--Texto, #1f2933);
+  font-size: 0.95rem;
+}
+
+
+/* ========================================
+   MEDIA QUERIES (RESPONSIVIDADE MOBILE)
+   ======================================== */
+
+@media (max-width: 768px) {
+  
+  /* Hero: Empilha texto e imagem */
+  .hero-container {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+  
+  .hero-botoes {
+    justify-content: center;
+  }
+
+  /* Destinos: 1 cartão por linha ocupando toda a largura */
+  .card {
+    width: 100%;
+  }
+
+  /* Contacto: Formulário em cima, bloco lateral em baixo */
+  .contacto-layout {
+    flex-direction: column;
+  }
+
+  /* Header: Ajustes do professor que já estavam, mas reforçados para os flexbox do header */
+  header > div {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  header nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  /* Footer: Empilhar as três colunas */
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+  }
+}

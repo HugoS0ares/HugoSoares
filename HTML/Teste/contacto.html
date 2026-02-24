@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="pt">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Exame Frontend | Contacto</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <div>
+      <a href="index.html">
+        <img src="Imagens/rotaLogo.png" alt="Rota Atlantica" /> 
+      </a>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#destinos">Destinos</a></li>
+          <li><a href="#vantagens">Vantagens</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+
+  <main class="pagina-contacto container">
+    <div class="contacto-cabecalho">
+      <h1>Pedir proposta de viagem</h1>
+      <p>Preenche o formulário com os teus dados e destino preferido.</p>
+    </div>
+
+    <div class="contacto-layout">
+      <div class="formulario-wrapper">
+        <form action="#" method="POST">
+          <div class="campo-form">
+            <label for="nome">Nome</label>
+            <input type="text" id="nome" name="nome" required>
+          </div>
+
+          <div class="campo-form">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+
+          <div class="campo-form">
+            <label for="destino">Destino preferido</label>
+            <select id="destino" name="destino" required>
+              <option value="">Seleciona</option>
+              <option value="lisboa">Lisboa</option>
+              <option value="madeira">Madeira</option>
+              <option value="porto">Porto</option>
+              <option value="sintra">Sintra</option>
+            </select>
+          </div>
+
+          <div class="campo-form">
+            <label for="mensagem">Mensagem</label>
+            <textarea id="mensagem" name="mensagem" required></textarea>
+          </div>
+
+          <button type="submit" class="btn-turquesa btn-full">Enviar pedido</button>
+        </form>
+      </div>
+
+ <div class="lateral-wrapper">
+        <div class="card-contacto">
+          
+          <div class="fundo-azul">
+            <img src="Imagens/rotaLogo.png" alt="Rota Atlântica" class="logo-redondo">
+          </div>
+
+          <h3>Contacto direto</h3>
+          <p><strong>Morada:</strong> Rua do Mar 20, Porto</p>
+          <p><strong>Email:</strong> info@rotaatlantica.pt</p>
+          <p><strong>Telefone:</strong> +351 910 000 000</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container footer-container">
+      <div class="footer">
+        <h3>Rota Atlântica</h3>
+        <p>Agência de viagens para experiências em Portugal.</p>
+      </div>
+      <div class="footer">
+        <h3>Contacto</h3>
+        <p>info@rotaatlantica.pt</p>
+        <p>+351 910 000 000</p>
+      </div>
+      <div class="footer">
+        <h3>Links</h3>
+        <p><a href="index.html">Home</a></p>
+        <p><a href="contacto.html">Contacto</a></p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
