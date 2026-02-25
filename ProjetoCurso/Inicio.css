@@ -1,0 +1,227 @@
+/* ============================================================
+   ESTILO FINAL: RESPONSIVO E LUXO (Entrada, Login, Registo)
+   ============================================================ */
+
+.auth-body {
+    /* Fundo escuro e madeira */
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
+                url('Imagens/madeira2.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: scroll; /* Scroll ajuda no mobile se o ecrã for pequeno */
+    
+    /* TRUQUE PARA TELEMÓVEL: 100dvh ignora a barra do navegador */
+    min-height: 100dvh; 
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 20px; /* Margem de segurança para não colar às bordas do telemóvel */
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+}
+
+/* --- ESTILO 1: PÁGINA DE ENTRADA (Espaço Aberto) --- */
+.welcome-hero {
+    width: 100%;
+    max-width: 800px;
+    animation: fadeUp 1.2s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.welcome-title {
+    font-family: 'Playfair Display', serif;
+    /* Tamanho inteligente: começa em 36px no telemóvel e vai até 70px no PC */
+    font-size: clamp(36px, 10vw, 70px); 
+    color: #d4af37;
+    margin-bottom: 15px;
+    line-height: 1.1;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 0 5px 15px rgba(0,0,0,0.8);
+}
+
+.welcome-subtitle {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    color: #ffffff;
+    font-size: clamp(14px, 4vw, 20px);
+    margin-bottom: 40px;
+    opacity: 0.9;
+    letter-spacing: 1px;
+    max-width: 90%; /* Garante que não bate nas bordas no mobile */
+}
+
+/* Botões da entrada */
+.welcome-buttons {
+    width: 100%;
+    max-width: 320px; /* Largura ideal para telemóvel */
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+    margin: 0 auto;
+    gap: 15px;
+}
+
+/* --- ESTILO 2: CAIXA DE LOGIN/REGISTO (Fundo Preto) --- */
+.auth-box {
+    background: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px); /* Necessário para funcionar bem em iPhones/Safari */
+    border: 1px solid rgba(212, 175, 55, 0.5); 
+    /* Padding que diminui em ecrãs pequenos */
+    padding: clamp(30px, 5vw, 50px) clamp(20px, 5vw, 40px);
+    width: 90%; 
+    max-width: 450px; 
+    box-sizing: border-box; 
+    margin: 20px auto;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+    animation: fadeUp 0.8s ease;
+}
+
+/* Títulos do Formuário */
+.auth-title {
+    font-family: 'Playfair Display', serif;
+    color: #d4af37;
+    font-size: 28px;
+    margin-bottom: 5px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.auth-subtitle {
+    color: #ccc;
+    font-size: 12px;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Campos de Texto */
+.auth-group { margin-bottom: 20px; text-align: left; }
+
+.auth-group label {
+    display: block;
+    color: #d4af37;
+    font-size: 11px;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+
+.auth-input {
+    width: 100% !important;
+    padding: 12px 0;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #444;
+    color: #ffffff !important;
+    box-sizing: border-box;
+    /* 16px é o mínimo para o iPhone não fazer zoom automático */
+    font-size: 16px; 
+    
+    border-radius: 0;
+    transition: 0.3s;
+}
+
+.auth-input:focus { outline: none; border-bottom: 1px solid #d4af37; }
+
+/* --- BOTÕES GERAIS --- */
+.btn-luxo {
+    display: block;
+    width: 100%;
+    padding: 16px; 
+    background-color: #d4af37; 
+    color: #050505 !important; 
+    border: 1px solid #d4af37;
+    
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px; 
+    
+    cursor: pointer;
+    text-align: center;
+    box-sizing: border-box;
+    transition: all 0.3s ease; 
+    margin-top: 10px; 
+}
+
+.btn-luxo:hover, .btn-luxo:active {
+    background-color: transparent; 
+    color: #d4af37 !important; 
+    box-shadow: 0 5px 15px rgba(212, 175, 55, 0.2); 
+}
+
+.btn-luxo-outline {
+    display: block;
+    width: 100%;
+    padding: 18px;
+    background: transparent;
+    color: #ffffff !important;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: 2px;
+    border: 1px solid rgba(255,255,255,0.3);
+    cursor: pointer;
+    transition: 0.3s;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.btn-luxo-outline:hover {
+    border-color: #d4af37;
+    color: #d4af37 !important;
+}
+
+/* Links do rodapé */
+.auth-footer { margin-top: 30px; font-size: 12px; color: #888; }
+.auth-footer a { color: #fff; text-decoration: none; border-bottom: 1px solid #d4af37; }
+
+/* --- AJUSTES FINAIS PARA ECRÃS MUITO PEQUENOS --- */
+@media (max-width: 380px) {
+    .welcome-title { font-size: 32px; } /* Garante que cabe */
+    .auth-box { padding: 30px 20px; } /* Ganha espaço lateral */
+    .btn-luxo, .btn-luxo-outline { padding: 15px; } /* Botão um pouco menor */
+}
+
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Ajuste para telemóveis muito pequenos (ex: iPhone SE) */
+@media (max-width: 360px) {
+    .auth-box {
+        padding: 25px 15px;
+    }
+    .auth-title {
+        font-size: 24px;
+    }
+}
+/* Efeito de carregamento no botão */
+.loader {
+    width: 12px;
+    height: 12px;
+    border: 2px solid #000;
+    border-bottom-color: transparent;
+    border-radius: 50%;
+    display: inline-block;
+    animation: rotation 1s linear infinite;
+    margin-right: 10px;
+}
+
+@keyframes rotation {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
