@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RENTA-AQUI | Gestão de Aluguer</title>
+    <link rel="stylesheet" href="Formulario.css">
+</head>
+<body>
+
+    <div class="form-container">
+        <header>
+            <h1>RENTA-AQUI</h1>
+            <p>Registo de Novo Contrato de Aluguer</p>
+        </header>
+
+        <form id="rentalForm">
+            <div class="form-grid">
+                
+                <div class="field-group">
+                    <label for="id_cliente">ID Cliente</label>
+                    <input type="number" id="id_cliente" name="id_cliente" placeholder="Ex: 1" required>
+                </div>
+
+                <div class="field-group">
+                    <label for="id_veiculo">ID Veículo</label>
+                    <input type="number" id="id_veiculo" name="id_veiculo" placeholder="Ex: 10" required>
+                </div>
+
+                <div class="field-group">
+                    <label for="id_funcionario">ID Funcionário</label>
+                    <input type="number" id="id_funcionario" name="id_funcionario" placeholder="Ex: 5" required>
+                </div>
+
+                <div class="field-group">
+                    <label for="estado">Estado Inicial</label>
+                    <select id="estado" name="estado" required>
+                        <option value="" disabled selected>Selecionar...</option>
+                        <option value="A Decorrer">A Decorrer</option>
+                        <option value="Reservado">Reservado</option>
+                    </select>
+                </div>
+
+                <div class="field-group">
+                    <label for="data_inicio">Data Início</label>
+                    <input type="datetime-local" id="data_inicio" name="data_inicio" required>
+                </div>
+
+                <div class="field-group">
+                    <label for="data_fim_prevista">Data Fim Prevista</label>
+                    <input type="datetime-local" id="data_fim_prevista" name="data_fim_prevista" required>
+                </div>
+
+                <div class="field-group full-width">
+                    <label for="observacoes">Observações</label>
+                    <textarea id="observacoes" name="observacoes" rows="4" placeholder="Notas sobre o estado do veículo ou extras..."></textarea>
+                </div>
+
+                <button type="submit" id="btnSubmit">Submeter Aluguer</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="Formulario.js"></script>
+</body>
+</html>
