@@ -1,4 +1,4 @@
-http://localhost:3006/Formulario.html -- link "tenho de deixar aberto para funcionar"
+http://localhost:3006/Formulario.html -- link 
 
-abrir terminal nesta pagina com este codigo - php -S localhost:3006
+abrir terminal nesta pagina com este codigo - php -S localhost:3006 "tenho de deixar aberto para funcionar"
 server do my sql tem de estar aberto

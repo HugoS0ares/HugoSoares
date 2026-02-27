@@ -14,7 +14,9 @@
             <p>Registo de Novo Contrato de Aluguer</p>
         </header>
 
-        <form id="rentalForm">
+        <form id="rentalForm" novalidate>
+            <input type="hidden" id="edit_id_aluguer" name="edit_id_aluguer" value="">
+            
             <div class="form-grid">
                 
                 <div class="field-group">
@@ -38,6 +40,8 @@
                         <option value="" disabled selected>Selecionar...</option>
                         <option value="A Decorrer">A Decorrer</option>
                         <option value="Reservado">Reservado</option>
+                        <option value="Concluído">Concluído</option>
+                        <option value="Cancelado">Cancelado</option>
                     </select>
                 </div>
 
@@ -59,6 +63,24 @@
                 <button type="submit" id="btnSubmit">Submeter Aluguer</button>
             </div>
         </form>
+    </div>
+
+    <div class="table-container">
+        <h2>Últimos Alugueres Inseridos</h2>
+        <table id="tabelaRegistos">
+            <thead>
+                <tr>
+                    <th>ID Cliente</th>
+                    <th>ID Veículo</th>
+                    <th>Estado</th>
+                    <th>Data Início</th>
+                    <th>Data Fim</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody id="tabelaCorpo">
+                </tbody>
+        </table>
     </div>
 
     <script src="Formulario.js"></script>
