@@ -69,13 +69,13 @@ const statusCodes = {
 
   // OBEJTO JS -> TEXTO
 //cli
-  const marcacao = {id: 1, "nome": "Ana", data: "2026-02-18", hora:"10:00"}
+  const marcacao = {"id": 1, "nome": "Ana", data: "2026-02-18", hora:"10:00"}
   const marcacaoJSON = JSON.stringify(marcacao) // converter a JSON string
   console.log(marcacao)
  
 
 // RECEBER
-const jsonrecebido = '{"id":2,"nome":"Rui","servico":"Exame"}';
+const jsonrecebido = '{"id":2, "nome":"Rui","servico":"Exame"}';
 const objetoRecebido = JSON.parse(jsonrecebido) // converte o texto JSON para objeto js
 console.log(objetoRecebido)
 
